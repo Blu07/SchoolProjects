@@ -1,0 +1,29 @@
+html {
+    background-image:linear-gradient(rgb(49, 49, 75), rgb(22, 22, 27));
+}
+
+
+body {
+    margin-left: 25%;
+    margin-right: 25%;
+    background: none;
+}
+
+img {
+    float: right;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    line-height: 130%;
+    text-shadow: black 1px 2px;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#date {
+    font-size: small;
+}
