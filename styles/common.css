@@ -5,7 +5,8 @@
 /* Structure */
 html {
     background-color: rgb(33, 34, 35);
-    color:rgb(244, 236, 226);
+    color:rgb(233, 226, 217);
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 body {
@@ -36,7 +37,6 @@ li {
 /* Links */
 a {
   color: rgb(79, 65, 2);
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-shadow: 0.5px 0.2px black;
 }
 
@@ -46,7 +46,7 @@ a:link {
 }
 
 a:visited {
-  color: red;
+  color: rgb(170, 14, 14);
   text-decoration: none;
 }
 
@@ -75,24 +75,17 @@ td > img {
 table {
   border-collapse: separate;
   margin: 10px;
-  border: 1px solid;
+  border-width: 1px 1px 0.8px 0.8px;
+  border-style: solid;
   border-color: rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.4) rgba(0, 0, 0, 0.8) rgba(0, 0, 0, 0.8);
 }
 
 
-/* Head and Body
-thead {}
-tbody {}
-*/
-
-/* Rows
-tr {}
-*/
-
-/* Head-cell and Body-cell(Data) */
+/* Table-head and Table-Data */
   /* Shared Styles */
 th, td {
-  border: 1px solid;
+  border-width: 0.8px 0.8px 1px 1px;
+  border-style: solid;
   border-color: rgba(0, 0, 0, 0.8) rgba(0, 0, 0, 0.8) rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.4);  
   padding: 4px 7px;
 }
