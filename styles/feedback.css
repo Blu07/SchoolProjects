@@ -1,8 +1,12 @@
+@import url('common.css');
+
+
+
 form {
   padding: 5px 10px;
 
   background-image: linear-gradient(rgb(226, 226, 237), rgb(234, 167, 167));
-  background-image: url("../nyheter/nyhet1/JonasGahrStore.jpg");
+  background-image: url("../Projects/Nyheter/nyhet1/JonasGahrStore.jpg");
   border: 3px solid rgb(120, 120, 171);
   border-radius: 10px;
 }

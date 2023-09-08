@@ -1,10 +1,8 @@
-html {
-  background-image: linear-gradient(rgb(49, 49, 75), rgb(22, 22, 27));
-}
+@import url('common.css');
+
 
 body {
   color: rgb(250, 245, 238);
-  margin: auto 15% auto;
   background: none;
 }
 
@@ -33,7 +31,6 @@ p {
   font-size: medium;
   line-height: 130%;
   text-shadow: black 1px 2px;
-
 }
 
 h1 {

@@ -1,0 +1,44 @@
+@import url('common.css');
+
+
+
+
+/* Main Table Element*/
+table {
+    border-collapse: separate;
+    margin: 10px;
+    border: 1px solid;
+    border-color: rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.4) rgba(0, 0, 0, 0.8) rgba(0, 0, 0, 0.8);
+}
+
+
+/* Head and Body */
+thead {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+/*
+tbody {}
+*/
+
+/* Rows
+tr {}
+*/
+
+/* Head-cell and Body-cell(Data) */
+    /* Shared Styles */
+th, td {
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.8) rgba(0, 0, 0, 0.8) rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.4);  
+    padding: 4px 7px;
+}
+
+    /* Separate Styles */
+th {
+    background-color: transparent;
+}
+
+td {
+    background-color: transparent;
+}
+
+

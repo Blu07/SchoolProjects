@@ -1,3 +1,6 @@
+@import url('common.css');
+
+
 #greeting {
     color: blue;
     background-image: none;
