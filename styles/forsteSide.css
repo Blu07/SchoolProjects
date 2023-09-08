@@ -1,0 +1,21 @@
+#greeting {
+    color: blue;
+    background-image: none;
+}
+
+p {
+    background-color: antiquewhite;
+}
+
+ul {
+    background-color: blue;
+    width: 15%;
+}
+
+ol {
+    background-color: red;
+}
+
+a {
+    background-color: blanchedalmond;
+}
