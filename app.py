@@ -7,14 +7,17 @@ import re
 
 secret_key = secrets.token_hex(16)
 
-app = Flask(__name__, template_folder="Projects")
+main_Folder = "Projects"
+
+
+app = Flask(__name__, template_folder=main_Folder)
 app.secret_key = secret_key
 
 def getProjects():
-    project_folder = "Projects"  # Change this to the path of your "Projects" folder
+    project_folder = main_Folder  # Change this to the path of your main_Folder folder
     project_pages = []
 
-    # Get a list of immediate child directories in the "Projects" folder
+    # Get a list of immediate child directories in the main_Folder folder
     project_subdirectories = [os.path.join(project_folder, d) for d in os.listdir(project_folder) if
                               os.path.isdir(os.path.join(project_folder, d))]
 
@@ -32,7 +35,7 @@ def getProjects():
                 # Join the words with spaces and capitalize the first letter of each word
                 file_name_str = ' '.join(word.capitalize() for word in words)
                 
-                # Create a link based on the file's relative path within the "Projects" folder
+                # Create a link based on the file's relative path within the main_Folder folder
                 relative_path = os.path.relpath(os.path.join(subdirectory, file), project_folder)
                 link = relative_path.replace(os.sep, '/')
 
@@ -48,14 +51,17 @@ def getProjects():
 
 
 
-@app.route('/Projects')
+
+
+
+@app.route('/')
 def index():
     projects = getProjects()
     return render_template("index.html", projects=projects)
 
 
 
-@app.route('/Projects/<path:project_path>')
+@app.route(f'/{main_Folder}/<path:project_path>')
 def serve_project(project_path):
     # Split the project_path into a list of directories and the final HTML file
     path_parts = project_path.split('/')
