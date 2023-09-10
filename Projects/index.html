@@ -3,22 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/common.css">
-    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
     <title>Main Page</title>
+    
   </head>
   <body>
-    <h1>Mine Sider</h1>
-
-    <ul>
-      <li><a href="Nyheter/artikkelOversikt.html">artikkelOversikt</a></li>
-      <li><a href="FlipCard/flipCard.html">flipCard</a></li>
-      <li><a href="FormlerFigurer/formlerFigurer.html">formlerFigurer</a></li>
-      <li><a href="ForsteSide/forsteSide.html">forsteSide</a></li>
-      <li><a href="Feedback/sendFeedback.html">sendFeedback</a></li>
-      <li><a href="Timeplan/timeplan.html">timeplan</a></li>
+    
+    <ul class="update_MENU">
+      {% for project in projects %}
+        <li><a href="Projects/{{project[1]}}">{{ project[0] }}</a></li>
+      {% endfor %}
     </ul>
     
-  <script src="../scripts/index.py"></script>
+   
+  <script src="{{ url_for('static', filename='js/index.js') }}"></script>
   </body>
 </html>
