@@ -1,2 +1,35 @@
 @import url('common.css');
 
+
+
+.menu {
+
+    position: fixed;
+    left: 0; /* Adjust the width of the menu to push it outside the margin */
+    top: 0;
+    width: 100px; /* Adjust the width as needed */
+    height: 100%;
+    padding-top: 20px;
+    transition: right 0.3s ease; /* Add a transition for a smoother effect */
+    background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu ul li {
+    padding: 8px 10px;
+}
+
+.menu ul li a {
+    display: block;
+}
+
+.menu ul li:hover {
+    transition: 0.3s;
+    background-color: rgba(0, 0, 0, 0.007);
+}

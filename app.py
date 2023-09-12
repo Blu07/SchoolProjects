@@ -1,8 +1,6 @@
-from flask import Flask, render_template, request, flash
+from flask import Flask, render_template
 import os
 import secrets
-import requests
-import json
 import re
 
 secret_key = secrets.token_hex(16)
