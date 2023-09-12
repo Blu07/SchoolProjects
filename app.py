@@ -2,7 +2,7 @@ from flask import Flask, render_template
 import os
 import secrets
 import re
--
+
 secret_key = secrets.token_hex(16)
 
 main_Folder = "Projects"
