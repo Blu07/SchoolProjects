@@ -15,7 +15,6 @@ cache/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
-__pycache__/app.cpython-311.pyc
 *.py[cod]
 
 # C extensions
