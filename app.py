@@ -5,7 +5,7 @@ import re
 
 secret_key = secrets.token_hex(16)
 
-main_Folder = "Projects"
+main_Folder = "projects"
 
 
 app = Flask(__name__, template_folder=main_Folder)
