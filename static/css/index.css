@@ -1,36 +1,53 @@
 @import url('common.css');
 
 
-
-.menu {
-    
-    display: flex;
-    position: fixed;
-    left: 0; /* Adjust the width of the menu to push it outside the margin */
-    top: 0;
-    width: 100px; /* Adjust the width as needed */
-    height: 100%;
-    padding-top: 20px;
-    transition: right 0.3s ease; /* Add a transition for a smoother effect */
-    background-color: rgba(0, 0, 0, 0.3);
-
+body {
+    margin: 0px;
 }
 
-
-.menu ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.menu ul li {
-    padding: 8px 10px;
-}
-
-.menu ul li a {
+main {
     display: block;
+    size: 100%;
+    background-color: rgb(37, 37, 70);
 }
 
-.menu ul li:hover {
-    transition: 0.3s;
-    background-color: rgba(0, 0, 0, 0.007);
+
+
+
+
+
+main nav {
+    background-color: rgba(36, 78, 78, 0.356);
+    padding: 10px 5px;
+    width: auto;
+    height: 100%;
+    display: flex;
+    position: sticky;
+    text-align: left;
+    float: left;
+    
+    list-style-type: none;
+    flex-flow: column nowrap;
+    flex-grow: 3;
+    
+    
+}
+
+
+main nav a {
+    background-color: rgba(127, 164, 196, 0.781);
+    padding: 2px;
+    margin: 2px;
+    border-radius: 3px;
+}
+
+
+
+
+
+
+main article {
+    padding:1cm;
+    display: block;
+    background-color: transparent;
 }
