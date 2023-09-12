@@ -3,7 +3,7 @@
 
 
 .menu {
-
+    display: flex;
     position: fixed;
     left: 0; /* Adjust the width of the menu to push it outside the margin */
     top: 0;
