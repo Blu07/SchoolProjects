@@ -5,31 +5,42 @@ body {
     margin: 0px;
 }
 
+
 main {
-    display: block;
-    size: 100%;
-    background-color: rgb(37, 37, 70);
+    display: grid;
+    grid-template-rows: 1fr;
+    background-color: rgb(20, 20, 46);
+    height: 100vh;
 }
 
 
+main header {
+    background-color: rgb(122, 122, 94);
+    height: 2cm;
+    width: 100vw;
 
+    color: black;
+    text-align: center;
+    font-size: 0.4cm;
+}
 
-
+main section {
+    flex-flow: row nowrap;
+}
 
 main nav {
-    background-color: rgba(36, 78, 78, 0.356);
+    display:flex;
+    flex-flow: column;
+    overflow-y: auto;
+
     padding: 10px 5px;
-    width: auto;
-    height: 100%;
-    display: flex;
-    position: sticky;
-    text-align: left;
-    float: left;
+    
+    width: 200px;
+    height: 100vh;
+    
+    background-color: rgba(36, 78, 78, 0.356);
     
     list-style-type: none;
-    flex-flow: column nowrap;
-    flex-grow: 3;
-    
     
 }
 
@@ -43,11 +54,16 @@ main nav a {
 
 
 
-
-
-
 main article {
-    padding:1cm;
-    display: block;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 0.5cm;
     background-color: transparent;
+    float: right;
+}
+
+
+main article p {
+    background-color: rgba(58, 58, 58, 0.393);
+    
 }

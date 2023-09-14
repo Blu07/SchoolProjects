@@ -3,39 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/index.css') }}"
+    />
     <title>Home</title>
-    
   </head>
   <body>
     <main>
       <header>
-        <h1>Main</h1>
+        <h1>Home Page</h1>
       </header>
-    
-      <nav>
-        {% for project in projects %}
-        <a href="Projects/{{project[1]}}">{{ project[0] }}</a>
-        {% endfor %}
-      </nav>
-      
+      <section>
+        <nav>
+          {% for project in projects %}
+          <a href="Projects/{{project[1]}}">{{ project[0] }}</a>
+          {% endfor %}
+        </nav>
 
-      <article>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, ipsum voluptatem. Aspernatur error vitae excepturi veritatis quam ullam unde suscipit dolor odit molestias, numquam a. Fuga architecto optio facilis dolores deserunt temporibus natus pariatur odio eos rerum recusandae nihil, distinctio non sint, maxime ea aperiam rem officia ad, earum omnis maiores unde. Minus non recusandae, id, omnis consectetur, excepturi eaque aliquam facilis at cumque a exercitationem ea! Ipsa iure eaque temporibus perspiciatis, beatae asperiores enim autem, illum doloribus necessitatibus, odio ullam aut fugit eos consequuntur quisquam accusamus. Alias sequi dolor, aliquid corporis aut, non magnam sint, voluptatibus rerum culpa distinctio.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat mollitia, fugiat ab dolore atque ad sequi deleniti vitae magni minima asperiores a, ducimus ipsa consequatur facere. Optio harum eum laudantium ipsa dolore, dolor impedit repellat corporis doloribus consectetur, saepe quas at non veritatis nihil illum velit fugiat ex consequuntur dicta nulla, et odio ut quisquam? Voluptates architecto voluptatum aliquam soluta dolore fugiat alias nostrum, temporibus quas magni. Doloremque non neque sint, quisquam, accusantium a temporibus cupiditate enim ipsa, repellat minus. Sequi numquam alias aperiam quisquam tempore ut temporibus nobis beatae ducimus, dignissimos commodi reprehenderit natus sint architecto quo id inventore laborum veniam! Optio voluptate consequuntur excepturi a minus nihil ad id, corporis, consectetur reprehenderit autem quia distinctio vero aliquam dolorem quod cum pariatur, veritatis provident! Laudantium officiis quibusdam ipsam cupiditate, facilis quisquam illo delectus pariatur provident impedit voluptate vel iusto eos, dolorum soluta animi officia perferendis autem excepturi dignissimos ab adipisci! Est enim, veniam alias voluptas incidunt animi ex corporis consectetur, suscipit dolores facere, error sit consequuntur at quo architecto nemo laudantium perferendis voluptates quaerat! Fuga officia amet sed numquam omnis accusantium et, consequuntur natus perspiciatis delectus quibusdam sit ratione maxime quaerat aliquid, modi dolore, maiores alias illo adipisci cumque. Accusamus officia ipsa quos facere velit minus culpa quaerat illum natus laboriosam, omnis voluptatibus saepe tempora similique exercitationem explicabo laudantium voluptatum dolores repellendus sed tempore inventore? Fuga pariatur beatae ipsam, maxime dicta ex dolorum.
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis et voluptatum maiores, ipsum, iste esse necessitatibus quod reprehenderit saepe dolor provident delectus voluptatibus totam quam deserunt ipsa, alias obcaecati non?
-      </article>
+        <article>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+            ipsum voluptatem. Aspernatur error vitae excepturi veritatis quam
+            ullam unde suscipit dolor odit molestias, numquam a. Fuga architecto
+            optio facilis dolores deserunt temporibus natus pariatur odio eos
+            rerum recusandae nihil, distinctio non sint, maxime ea aperiam rem
+            officia ad, earum omnis maiores unde. Minus non recusandae, id,
+            omnis consectetur, excepturi eaque aliquam facilis at cumque a
+            exercitationem ea! Ipsa iure eaque temporibus perspiciatis, beatae
+            asperiores enim autem, illum doloribus necessitatibus, odio ullam
+            aut fugit eos consequuntur quisquam accusamus. Alias sequi dolor,
+            aliquid corporis aut, non magnam sint, voluptatibus rerum culpa
+            distinctio.
+          </p>
+        </article>
 
-      <article>
-        <header>
-          <h1>What Does WWF Do?</h1>
-          <p>WWF's mission</p>
-        </header>
-        <p>WWF's mission is to stop the degradation of our planet's natural environment,
-          and build a future in which humans live in harmony with nature.</p>
-      </article>
+        <address>
+          <p>Blu William Opland</p>
+        </address>
+      </section>
     </main>
-    
-  <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
   </body>
 </html>

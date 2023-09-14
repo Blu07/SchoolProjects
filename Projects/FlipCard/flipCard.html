@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/formlerFigurer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/flipCard.css') }}">
     <title>Flip Card</title>
   </head>
   <body>
@@ -12,6 +12,6 @@
 
     <input type="button" value="Next Greeting" onclick="newGreet()">
 
-		<script src="../../scripts/flipCard.js"></script>
+		<script src="{{ url_for('static', filename='js/flipCard.js') }}"></script>
   </body>
 </html>
