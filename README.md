@@ -1,4 +1,5 @@
 # SchoolProjects
 
-__Dependency__;
-pip install flask
+__Run Commands:__
+> python -m venv venv \
+> pip install flask 
