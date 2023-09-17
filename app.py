@@ -1,5 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 import os
+import subprocess
 import secrets
 import re
 
@@ -50,8 +51,6 @@ def getProjects():
 
 
 
-
-
 @app.route('/')
 def index():
     projects = getProjects()
@@ -80,5 +79,12 @@ def serve_project(project_path):
     return render_template(f"{project_name}/{subfolders}/{file_name}")
 
 
+
+
 if __name__ == '__main__':
+    # Run the SASS watcher script as a subprocess and capture its output
+    sass_watcher_process = subprocess.Popen(['python', 'sass_watcher.py'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    
     app.run()
+
+    sass_watcher_process.terminate()
