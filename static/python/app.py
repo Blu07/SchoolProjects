@@ -3,22 +3,24 @@ import os
 import subprocess
 import secrets
 import re
+import threading
 
 secret_key = secrets.token_hex(16)
-
-main_Folder = "Projects"
+# Calculate the absolute path to the 'Projects' directory from the location of app.py
+main_Folder = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'Projects'))
+#main_Folder = "../../Projects"
 
 
 app = Flask(__name__, template_folder=main_Folder)
 app.secret_key = secret_key
 
 def getProjects():
-    project_folder = main_Folder  # Change this to the path of your main_Folder folder
+    
     project_pages = []
 
     # Get a list of immediate child directories in the main_Folder folder
-    project_subdirectories = [os.path.join(project_folder, d) for d in os.listdir(project_folder) if
-                              os.path.isdir(os.path.join(project_folder, d))]
+    project_subdirectories = [os.path.join(main_Folder, d) for d in os.listdir(main_Folder) if
+                              os.path.isdir(os.path.join(main_Folder, d))]
 
     # Iterate through the subdirectories and check for HTML files one layer down
     for subdirectory in project_subdirectories:
@@ -35,7 +37,7 @@ def getProjects():
                 file_name_str = ' '.join(word.capitalize() for word in words)
                 
                 # Create a link based on the file's relative path within the main_Folder folder
-                relative_path = os.path.relpath(os.path.join(subdirectory, file), project_folder)
+                relative_path = os.path.relpath(os.path.join(subdirectory, file), main_Folder)
                 link = relative_path.replace(os.sep, '/')
 
                 # Add the title and link to the project_pages list
@@ -44,8 +46,6 @@ def getProjects():
     # Sort the project_pages list alphabetically by title
     project_pages.sort(key=lambda x: x[0])
 
-    # Generate the HTML code
-   
     return (project_pages)
 
 
@@ -54,7 +54,7 @@ def getProjects():
 @app.route('/')
 def index():
     projects = getProjects()
-    return render_template("index.html", projects=projects)
+    return render_template(f"{main_Folder}/index.html", projects=projects)
 
 
 
@@ -76,15 +76,19 @@ def serve_project(project_path):
     subfolders = "/".join(path_parts[1:-1])
 
     # Render the template with the appropriate folder structure
-    return render_template(f"{project_name}/{subfolders}/{file_name}")
+    return render_template(f"{main_Folder}/{project_name}/{subfolders}/{file_name}")
 
 
 
 
 if __name__ == '__main__':
-    # Run the SASS watcher script as a subprocess and capture its output
-    sass_watcher_process = subprocess.Popen(['python', 'sass_watcher.py'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-    
-    app.run()
+     # Define a function to run the SASS watcher
+    def run_sass_watcher():
+        sass_watcher_process = subprocess.Popen(['python', 'sass_watcher.py'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        sass_watcher_process.communicate()
 
-    sass_watcher_process.terminate()
+    # Create a thread to run the SASS watcher
+    sass_watcher_thread = threading.Thread(target=run_sass_watcher)
+    sass_watcher_thread.daemon = True  # Exit the thread when the main program exits
+    sass_watcher_thread.start()
+    app.run()

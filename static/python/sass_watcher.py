@@ -4,14 +4,14 @@ from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
 # Define the paths of the css ans scss folders
-scss_folder = 'static\scss'
-css_folder = 'static\css'
+scss_folder = 'static/scss'
+css_folder = 'static/css'
 
 # Define the command to compile SASS
 class SASSHandler(FileSystemEventHandler):
     def on_modified(self, event):
         src_path = event.src_path
-        new_file_path = f"{css_folder}\{src_path[len(scss_folder) + 1:-4]+'css'}"
+        new_file_path = f"{css_folder}/{src_path[len(scss_folder) + 1:-4]+'css'}"
 
         sass_command = f'sass {src_path} {new_file_path}'
         print(f"Changes detected in {src_path}")
