@@ -64,13 +64,34 @@ main {
   }
 }
 main > article, main > section {
-  background-color: var(--primary-color);
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: transparent;
 }
 
-main > article p, main > section p {
-  background-color: rgba(58, 58, 58, 0.393);
+article p, section p {
+  background-color: rgba(58, 58, 58, 0.4);
+  flex: 1;
+  
   margin: 10px;
   padding: 3px 5px;
 }
 
-/*# sourceMappingURL=index.css.map */
+article img, section img {
+  display: block;
+  background-color: rgba(58, 58, 58, 0.4);
+  flex-basis: auto;
+  
+  max-width: 25%;
+  margin: 10px;
+  padding: 3px 5px;
+
+}
+
+.img_right {
+  margin-left: -4px;
+}
+
+.img_left {
+  margin-right: -4px;
+}
