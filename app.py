@@ -1,15 +1,13 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, send_from_directory
 import os
 import subprocess
+import threading
 import secrets
 import re
-import threading
 
 secret_key = secrets.token_hex(16)
-# Calculate the absolute path to the 'Projects' directory from the location of app.py
-main_Folder = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'Projects'))
-#main_Folder = "../../Projects"
 
+main_Folder = 'Projects'
 
 app = Flask(__name__, template_folder=main_Folder)
 app.secret_key = secret_key
@@ -54,7 +52,7 @@ def getProjects():
 @app.route('/')
 def index():
     projects = getProjects()
-    return render_template(f"{main_Folder}/index.html", projects=projects)
+    return render_template(f"/index.html", projects=projects)
 
 
 
@@ -76,15 +74,17 @@ def serve_project(project_path):
     subfolders = "/".join(path_parts[1:-1])
 
     # Render the template with the appropriate folder structure
-    return render_template(f"{main_Folder}/{project_name}/{subfolders}/{file_name}")
+    return render_template(f"/{project_name}/{subfolders}/{file_name}")
 
-
+@app.route('/static/images/<filename>')
+def serve_image(filename):
+    return send_from_directory('static\images', filename)
 
 
 if __name__ == '__main__':
      # Define a function to run the SASS watcher
     def run_sass_watcher():
-        sass_watcher_process = subprocess.Popen(['python', 'sass_watcher.py'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        sass_watcher_process = subprocess.Popen(['python', 'static\python\sass_watcher.py'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         sass_watcher_process.communicate()
 
     # Create a thread to run the SASS watcher

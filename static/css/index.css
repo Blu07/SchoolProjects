@@ -1,4 +1,4 @@
-@import 'common.css';
+@import "common.css";
 body {
   padding: 0;
   margin: 0px;
@@ -36,7 +36,7 @@ header h1 {
 
 #sidebar > nav > a {
   display: block;
-  background-color: rgba(127, 164, 196, 0.781);
+  background-color: rgba(127, 164, 196, 0.8);
   padding: 4px;
   margin: 2px;
   border-radius: 3px;
@@ -63,11 +63,13 @@ main {
     margin-left: 210px;
   }
 }
-main > article, main > section {
+main > article,
+main > section {
   background-color: var(--primary-color);
 }
 
-main > article p, main > section p {
+main > article p,
+main > section p {
   background-color: rgba(58, 58, 58, 0.393);
   margin: 10px;
   padding: 3px 5px;
