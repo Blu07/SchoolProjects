@@ -13,10 +13,11 @@ class SASSHandler(FileSystemEventHandler):
         src_path = event.src_path
         new_file_path = f"{css_folder}/{src_path[len(scss_folder) + 1:-4]+'css'}"
 
-        sass_command = f'sass {src_path} {new_file_path}'
-        print(f"Changes detected in {src_path}")
+        sass_command = f"sass {src_path} {new_file_path}"
+        # print(sass_command)
+        # print(f"Changes detected in {src_path}")
         os.system(sass_command)
-        print("SASS compilation complete")
+        # print("SASS compilation complete")
 
 
 

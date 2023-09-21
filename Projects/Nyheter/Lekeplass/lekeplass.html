@@ -26,15 +26,11 @@
         Orci varius natoque penatibus et magnis dis parturient montes, nascetur
         ridiculus mus. Suspendisse nec felis sed lorem tincidunt.
       </h3>
-
-      <img
-        src="Lekeplass_1.jpg"
-        class="right"
-        alt="Barn henger i klatrestativ på lekeplass."
-      />
-
+     
+      <img class="right" src="{{ url_for('serve_image', filename='Lekeplass_1.jpg') }}" alt="Barn henger i klatrestativ på lekeplass."/>
+      
       <p class="sitat">
-        – Etiam arcu dolor, porta non tristique sit amet, facilisis ut sem.
+        - Etiam arcu dolor, porta non tristique sit amet, facilisis ut sem.
         Integer.
       </p>
       <p>
@@ -43,16 +39,12 @@
         ultricies. Ut et tristique orci. Donec enim justo.
       </p>
       <p class="sitat">
-        – Nulla condimentum at enim id efficitur. Curabitur non arcu cursus,
+        - Nulla condimentum at enim id efficitur. Curabitur non arcu cursus,
         pulvinar nibh ultricies, scelerisque arcu. Quisque at odio condimentum,
         porttitor erat vel, ultricies erat. Aliquam erat volutpat. Suspendisse
         potenti. Sed ullamcorper, ligula.
       </p>
-      <img
-        src="Lekeplass_2.jpg"
-        class="left"
-        alt="Barn klatrer på lekeplass om vinteren."
-      />
+      <img class="left" src="{{ url_for('serve_image', filename='Lekeplass_2.jpg') }}" alt="Barn klatrer på lekeplass om vinteren." />
       <p>
         Mauris viverra auctor augue, tempus vestibulum odio laoreet nec. Integer
         mollis lorem scelerisque nunc faucibus, ut cursus libero aliquam.

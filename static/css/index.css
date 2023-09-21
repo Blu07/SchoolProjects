@@ -1,4 +1,4 @@
-@import 'common.css';
+@import "common.css";
 body {
   padding: 0;
   margin: 0px;
@@ -36,7 +36,7 @@ header h1 {
 
 #sidebar > nav > a {
   display: block;
-  background-color: rgba(127, 164, 196, 0.781);
+  background-color: rgba(127, 164, 196, 0.8);
   padding: 4px;
   margin: 2px;
   border-radius: 3px;
@@ -63,7 +63,8 @@ main {
     margin-left: 210px;
   }
 }
-main > article, main > section {
+main > article,
+main > section {
   display: flex;
   flex-flow: row nowrap;
   background-color: transparent;

@@ -1,111 +1,90 @@
-@import 'common.css';
+@import "common.css";
 
 $primary-color: rgb(33, 34, 35);
 $sidebar-max-width-px: 200px;
 $sidebar-width-percent: 25%;
-$sidebar-width-percent-dc: calc(str-slice(#{$sidebar-width-percent}, 1, -2) / 100);
-
+$sidebar-width-percent-dc: calc(
+  str-slice(#{$sidebar-width-percent}, 1, -2) / 100
+);
 
 body {
-    padding: 0;
-    margin: 0px;
+  padding: 0;
+  margin: 0px;
 }
 
-
-
 header {
-    background-color: $primary-color;
-    height: 1.5cm;
-    width: 100vw;
+  background-color: $primary-color;
+  height: 1.5cm;
+  width: 100vw;
 
-    text-align: center;
-    position: sticky;
-    top: 0;
-    
+  text-align: center;
+  position: sticky;
+  top: 0;
 }
 
 header h1 {
-    margin: 0;
-    font-size: auto;
+  margin: 0;
+  font-size: auto;
 }
-
-
-
 
 #sidebar {
+  padding: 5px;
 
-    padding: 5px;
-    
-    width: $sidebar-width-percent;
-    max-width: $sidebar-max-width-px;
-    height: 100vh;
-    
-    background-color: transparent;
-    position: fixed;
+  width: $sidebar-width-percent;
+  max-width: $sidebar-max-width-px;
+  height: 100vh;
 
-   
+  background-color: transparent;
+  position: fixed;
 }
-
 
 #sidebar > nav {
-    display: flex;
-    flex-flow: column nowrap;
-    overflow-y: auto;
-    align-items: stretch;
-    
-
+  display: flex;
+  flex-flow: column nowrap;
+  overflow-y: auto;
+  align-items: stretch;
 }
-
 
 #sidebar > nav > a {
-    display: block;
-    background-color: rgba(127, 164, 196, 0.781);
-    padding: 4px;
-    margin: 2px;
-    border-radius: 3px;
+  display: block;
+  background-color: rgba(127, 164, 196, 0.8);
+  padding: 4px;
+  margin: 2px;
+  border-radius: 3px;
 }
 
-
 #sidebar > address {
-    position: sticky;
-    bottom: 0;
+  position: sticky;
+  bottom: 0;
 }
 
 #sidebar > address > p {
-    margin: 0;
+  margin: 0;
 }
 
-
-
-
-
 main {
-    display: flex;
-    flex-flow: column nowrap;
-    
-    
-    margin-left: calc($sidebar-width-percent + 10px);
+  display: flex;
+  flex-flow: column nowrap;
 
-    height: fit-content;
+  margin-left: calc($sidebar-width-percent + 10px);
+
+  height: fit-content;
 }
 
 @media (min-width: calc(#{$sidebar-max-width-px} / ($sidebar-width-percent-dc))) {
-    main {
-        margin-left: calc($sidebar-max-width-px + 10px);
-    }
+  main {
+    margin-left: calc($sidebar-max-width-px + 10px);
+  }
 }
 
-
-
-
-main > article, main > section {
-    background-color: var(--primary-color);
+main > article,
+main > section {
+  background-color: var(--primary-color);
 }
 
-
-main > article p, main > section p {
-    background-color: rgba(58, 58, 58, 0.393);
-    margin: 10px;
-    padding: 3px 5px;
+main > article p,
+main > section p {
+  background-color: rgba(58, 58, 58, 0.393);
+  margin: 10px;
+  padding: 3px 5px;
 }
-
