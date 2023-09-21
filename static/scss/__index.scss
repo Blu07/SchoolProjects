@@ -53,15 +53,6 @@ header h1 {
   border-radius: 3px;
 }
 
-#sidebar > address {
-  position: sticky;
-  bottom: 0;
-}
-
-#sidebar > address > p {
-  margin: 0;
-}
-
 main {
   display: flex;
   flex-flow: column nowrap;

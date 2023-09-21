@@ -1,0 +1,15 @@
+@import 'common.css';
+
+.grid_body {
+    display: grid;
+    background-color: rgba(60, 67, 67, 0.331);
+    grid-template-columns: 4fr 2fr 3fr ;
+    grid-auto-rows: minmax(20px, auto);
+}
+
+.grid_body > * {
+    margin: 2px;
+    background-color: rgba(157, 39, 39, 0.9);
+    padding: 5px;
+    border-radius: 4px;
+}

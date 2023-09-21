@@ -18,38 +18,8 @@ header h1 {
   font-size: auto;
 }
 
-#sidebar {
-  padding: 5px;
-  width: 25%;
-  max-width: 200px;
-  height: 100vh;
-  background-color: transparent;
-  position: fixed;
-}
 
-#sidebar > nav {
-  display: flex;
-  flex-flow: column nowrap;
-  overflow-y: auto;
-  align-items: stretch;
-}
 
-#sidebar > nav > a {
-  display: block;
-  background-color: rgba(127, 164, 196, 0.8);
-  padding: 4px;
-  margin: 2px;
-  border-radius: 3px;
-}
-
-#sidebar > address {
-  position: sticky;
-  bottom: 0;
-}
-
-#sidebar > address > p {
-  margin: 0;
-}
 
 main {
   display: flex;
@@ -66,7 +36,7 @@ main {
 main > article,
 main > section {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   background-color: transparent;
 }
 
@@ -83,7 +53,8 @@ article img, section img {
   background-color: rgba(58, 58, 58, 0.4);
   flex-basis: auto;
   
-  max-width: 25%;
+  max-width: 30%;
+  min-width: 3cm;
   margin: 10px;
   padding: 3px 5px;
 

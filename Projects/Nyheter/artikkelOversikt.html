@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/artikkel.css') }}">
     <title>Oversikt</title>
 </head>
 <body>
+    <div id="side-menu"></div>
     <h1>Siste Nytt</h1>
     
     <ol> 
@@ -14,5 +15,6 @@
         <li><a href="nyhet2/artikkel.html">Fyll-Nyhet</a></li>
         <li><a href="Lekeplass/lekeplass.html">Lekeplass</a></li>
     </ol>
+    <script src="{{ url_for('static', filename='js/serve_placeholder.js') }}"></script>
 </body>
 </html>

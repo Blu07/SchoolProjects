@@ -4,6 +4,7 @@ import subprocess
 import threading
 import secrets
 import re
+import json
 
 secret_key = secrets.token_hex(16)
 
@@ -37,22 +38,26 @@ def getProjects():
                 # Create a link based on the file's relative path within the main_Folder folder
                 relative_path = os.path.relpath(os.path.join(subdirectory, file), main_Folder)
                 link = relative_path.replace(os.sep, '/')
-
+                print(link)
+                
                 # Add the title and link to the project_pages list
                 project_pages.append((file_name_str, link))
 
     # Sort the project_pages list alphabetically by title
     project_pages.sort(key=lambda x: x[0])
 
-    return (project_pages)
+    json_data = [{"name": name, "url": f'{main_Folder}/{url}'} for name, url in project_pages]
+    json_file_path = 'static/json/projects.json'
+    
+    with open(json_file_path, 'w') as json_file:
+        json.dump(json_data, json_file, indent=4)
 
 
 
 
 @app.route('/')
 def index():
-    projects = getProjects()
-    return render_template(f"/index.html", projects=projects)
+    return render_template(f"/index.html")
 
 
 
@@ -75,10 +80,6 @@ def serve_project(project_path):
 
     # Render the template with the appropriate folder structure
     return render_template(f"/{project_name}/{subfolders}/{file_name}")
-
-@app.route('/static/images/<filename>')
-def serve_image(filename):
-    return send_from_directory('static\images', filename)
 
 
 if __name__ == '__main__':
