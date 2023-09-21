@@ -1,29 +1,15 @@
 @import "common.css";
+
+
 body {
-  padding: 0;
-  margin: 0px;
+  display: grid;
 }
-
-header {
-  background-color: rgb(33, 34, 35);
-  height: 1.5cm;
-  width: 100vw;
-  text-align: center;
-  position: sticky;
-  top: 0;
-}
-
-header h1 {
-  margin: 0;
-  font-size: auto;
-}
-
 
 
 
 main {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   margin-left: calc(25% + 10px);
   height: fit-content;
 }
@@ -33,14 +19,16 @@ main {
     margin-left: 210px;
   }
 }
-main > article,
-main > section {
+
+main > *,
+main > * {
   display: flex;
   flex-flow: row wrap;
   background-color: transparent;
 }
 
-article p, section p {
+main > * > p,
+main > * > p {
   background-color: rgba(58, 58, 58, 0.4);
   flex: 1;
   
@@ -48,7 +36,8 @@ article p, section p {
   padding: 3px 5px;
 }
 
-article img, section img {
+main > * > img,
+main > * > img {
   display: block;
   background-color: rgba(58, 58, 58, 0.4);
   flex-basis: auto;
@@ -60,10 +49,11 @@ article img, section img {
 
 }
 
-.img_right {
+main > * > img.right {
   margin-left: -4px;
 }
 
-.img_left {
+main > * > img.left {
   margin-right: -4px;
 }
+

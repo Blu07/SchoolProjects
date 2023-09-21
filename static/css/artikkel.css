@@ -1,9 +1,7 @@
 @import 'common.css';
 
-
 body {
-  color: rgb(250, 245, 238);
-  background: none;
+  margin: 0 15%;
 }
 
 img {

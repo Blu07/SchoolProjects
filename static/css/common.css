@@ -4,25 +4,64 @@
 
 /* Structure */
 html {
-    background-color: rgb(33, 34, 35);
-    color:rgb(233, 226, 217);
-    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  background-color: rgb(33, 34, 35);
+  color: rgb(226, 219, 212);
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+    sans-serif;
 }
 
 body {
-    margin: auto 15%;
-    overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+/* Globals */
+/* Main Grid */
+#main_grid {
+  display: grid;
+  background-color: transparent;
+  grid-template-columns: 1fr 7fr;
+  grid-auto-rows: minmax(20px, auto);
 }
 
 
+/* Global Header */
+#top-bar {
+  grid-column: 1 / span 2;
+
+  position: sticky;
+  top: 0;
+
+  width: 100%;
+  height: 2cm;
+
+  background-color: rgb(33, 34, 35);
+}
+
+#top-bar > h1 {
+  margin: 0;
+  font-size: 0.8cm;
+  line-height: 2cm;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+}
+
 /* Global Side Menu */
 #side-menu {
+  grid-row: 2 / span 3;
+  
   padding: 5px;
-  width: 25%;
+  
+  position: sticky;
+  top: 2cm;
+  
+  height: calc(100vh - 2cm);
+  min-width: 5cm;
   max-width: 200px;
-  height: 100vh;
-  background-color: red;
-  position: fixed;
+  
+  background-color: transparent;
 }
 
 #side-menu > nav {
@@ -41,27 +80,70 @@ body {
 }
 
 
+/* Global Main */
+main {
+  display: flex;
+  flex-flow: column wrap;
+
+  margin-right: 5cm;
+  
+}
+
+main * {
+  margin-bottom: 2px;
+  padding: 4px;
+}
+
+
+
+/* Global Address */
+address {
+  bottom: 0px;
+  margin-right: 5cm;
+
+  height: auto;
+  min-height: 50px;
+  
+
+  background-color: rgba(54, 47, 38, 0.267);
+}
+
 
 
 /* Images */
 img {
-    max-width:100%;
+  display: block;
+  min-width: 15%;
+  width: 40%;
+  object-fit: cover;
+  object-position: center center;
+  min-height: 100px;
+  border-radius: 6px;
 }
 
+img.right {
+  float: right;
+  margin-left: 10px;
+}
+
+img.left {
+  float: left;
+  margin-right: 10px;
+}
 
 /* Lists */
-ul, ol {
-    width: 50%;
-    min-width: 150px;
+ul,
+ol {
+  width: 50%;
+  min-width: 150px;
 }
 
 li {
-    background-color: rgba(8, 243, 165, 0.742);
-    margin: 2px;
-    padding: 2px;
-    border-radius: 2px;
+  background-color: rgba(8, 243, 165, 0.742);
+  margin: 2px;
+  padding: 2px;
+  border-radius: 2px;
 }
-
 
 /* Links */
 a {
@@ -89,9 +171,6 @@ a:active {
   text-decoration: underline dashed;
 }
 
-
-
-
 /* Tables */
 td > img {
   display: block;
@@ -99,27 +178,28 @@ td > img {
   margin: auto auto;
 }
 
-
 /* Main Table Element*/
 table {
   border-collapse: separate;
   margin: 10px;
   border-width: 1px 1px 0.8px 0.8px;
   border-style: solid;
-  border-color: rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.4) rgba(0, 0, 0, 0.8) rgba(0, 0, 0, 0.8);
+  border-color: rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.4)
+    rgba(0, 0, 0, 0.8) rgba(0, 0, 0, 0.8);
 }
 
-
 /* Table-head and Table-Data */
-  /* Shared Styles */
-th, td {
+/* Shared Styles */
+th,
+td {
   border-width: 0.8px 0.8px 1px 1px;
   border-style: solid;
-  border-color: rgba(0, 0, 0, 0.8) rgba(0, 0, 0, 0.8) rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.4);  
+  border-color: rgba(0, 0, 0, 0.8) rgba(0, 0, 0, 0.8) rgba(255, 255, 255, 0.4)
+    rgba(255, 255, 255, 0.4);
   padding: 4px 7px;
 }
 
-  /* Separate Styles */
+/* Separate Styles */
 th {
   background-color: rgba(0, 0, 0, 0.2);
 }
@@ -127,8 +207,6 @@ th {
 td {
   background-color: rgba(0, 0, 0, 0.05);
 }
-
-
 
 /* Scroll Bar */
 ::-webkit-scrollbar {
@@ -138,12 +216,16 @@ td {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(74, 62, 62, 0.4); /* Color of the thumb (the draggable part) */
+  background-color: rgba(
+    74,
+    62,
+    62,
+    0.4
+  ); /* Color of the thumb (the draggable part) */
   border-radius: 20px; /* Rounded corners for the thumb */
   padding: 2px;
 }
 
 ::-webkit-scrollbar-track {
   background-color: transparent; /* Color of the track (the background of the scrollbar) */
-
 }

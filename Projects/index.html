@@ -10,11 +10,11 @@
     <title>Home</title>
   </head>
   <body>
-    <header>
-      <h1>Home Page</h1>
-    </header>
+    <div id="top-bar">
+      <header><h1>Home Page</h1></header>
+    </div>
 
-   <div id="side-menu"></div>
+    <div id="side-menu"></div>
 
     <main>
       <article>
@@ -22,14 +22,14 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, ipsum
           voluptatem.
         </p>
-        <img class="img_right" src="#" alt="Bilde av Lorem Ipsum" width="20%">
+        <img class="right" src="#" alt="Bilde av Lorem Ipsum" width="20%">
 
       </article>
       
-      <address>
-        <p>Blu William Opland</p>
-      </address>
     </main>
+    <address>
+      <p>Blu William Opland</p>
+    </address>
     <script src="{{ url_for('static', filename='js/serve_placeholder.js') }}"></script>
     </body>
 </html>

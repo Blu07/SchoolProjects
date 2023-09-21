@@ -1,15 +1,31 @@
 @import 'common.css';
 
-.grid_body {
+
+
+.gallery {
     display: grid;
-    background-color: rgba(60, 67, 67, 0.331);
-    grid-template-columns: 4fr 2fr 3fr ;
-    grid-auto-rows: minmax(20px, auto);
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: repeat(3, 500px);
+    gap: 0.3cm;
 }
 
-.grid_body > * {
-    margin: 2px;
-    background-color: rgba(157, 39, 39, 0.9);
-    padding: 5px;
-    border-radius: 4px;
+.portrait {
+    display: grid;
+    grid-template-rows:2cm calc(100% - 3cm - 2cm) 3cm;
+
+
+    border: 2px solid black;
+    border-radius: 10px;
+    background-image: url("../images/JonasGahrStore.jpg");
+}
+
+
+.portrait > h2 {
+    text-align: center;
+    background-color: azure;
+}
+
+.portrait > p {
+background-color: aliceblue;
+   grid-area: auto;
 }
