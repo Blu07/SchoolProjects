@@ -1,23 +1,19 @@
-@import 'common.css';
-
-#greeting {
-    color: blue;
-    background-image: none;
+main > #greeting {
+  color: blue;
+  background-image: none;
+}
+main > p {
+  background-color: antiquewhite;
+}
+main > ul {
+  background-color: blue;
+  width: 15%;
+}
+main > ol {
+  background-color: red;
+}
+main > a {
+  background-color: blanchedalmond;
 }
 
-p {
-    background-color: antiquewhite;
-}
-
-ul {
-    background-color: blue;
-    width: 15%;
-}
-
-ol {
-    background-color: red;
-}
-
-a {
-    background-color: blanchedalmond;
-}
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../scss/forsteSide.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAEI;EACI;EACA;;AAGJ;EACI;;AAGJ;EACI;EACA;;AAGJ;EACI;;AAGJ;EACI%22,%22file%22:%22forsteSide.css%22%7D */
