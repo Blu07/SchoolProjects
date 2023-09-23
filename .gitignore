@@ -66,4 +66,4 @@ coverage.xml
 docs/_build/
 
 # SASS
-*.css.map
+*.css
