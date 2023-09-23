@@ -1,5 +1,6 @@
 import os
 import time
+import sys
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
@@ -13,15 +14,34 @@ class SASSHandler(FileSystemEventHandler):
         src_path = event.src_path
         new_file_path = f"{css_folder}/{src_path[len(scss_folder) + 1:-4]+'css'}"
 
-        sass_command = f"sass {src_path} {new_file_path}"
-        # print(sass_command)
-        # print(f"Changes detected in {src_path}")
+        sass_command = f"sass --embed-source-map {src_path} {new_file_path}"
+        print(f"Changes detected in {src_path}")
         os.system(sass_command)
-        # print("SASS compilation complete")
+        print("SASS compilation complete")
 
 
 
-if __name__ == "__main__":
+def compile_sass():
+    for root, _, files in os.walk(scss_folder):
+        for file in files:
+            if file.endswith(".scss"):
+                scss_path = os.path.join(root, file)
+                css_path = os.path.join(css_folder, os.path.splitext(file)[0] + '.css')
+                sass_command = f"sass --embed-source-map {scss_path} {css_path}"
+                os.system(sass_command)
+
+
+
+
+def main():
+    
+    # Check for the --full-sass command-line argument
+    if len(sys.argv) > 1 and sys.argv[1] == '--full-sass':
+        print(f"Preprocessing all .sass files in {scss_folder}.")
+        compile_sass()
+        print("Sass preprocessing complete.")
+    
+    
     # Create an observer that monitors the directory
     observer = Observer()
     event_handler = SASSHandler()
@@ -36,3 +56,10 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         observer.stop()
     observer.join()
+
+
+
+if __name__ == "__main__":
+    main()
+    
+   
