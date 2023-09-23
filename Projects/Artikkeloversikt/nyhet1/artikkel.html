@@ -1,17 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/artikkel.css') }}">
-    <title>Artikkel 1</title>
-</head>
-<body>
-    
+{% extends 'base.html' %}
+
+
+{% block head %}
+    <link rel="stylesheet" href=" {{ url_for('static', filename='css/artikkel.css') }} ">
+{% endblock %}
+
+
+{% block main %}
+
     <h1>Jonas Gahr Støre gir støttepenger til barnas dag.</h1>
-    
+        
     <p id="date">Oslo, 30. august 2023</p>
-    
+
     <p>
         I en nylig kunngjøring har statsminister Jonas Gahr Støre kunngjort en ny
         støtteordning som tar sikte på å styrke barnas velferd og trivsel.
@@ -36,7 +36,7 @@
             sportslige og utdanningsrelaterte aktiviteter.
         </p>
     </div>
-    
+
     <div>
         <p>
             Støtteordningen vil gi familier økonomisk støtte på månedlig basis, avhengig av antall
@@ -48,7 +48,7 @@
         <img class="left" src="{{ url_for('static', filename='images/Oversiktsbilde-tivoli.png') }}" alt="Oversiktsbilde over tivoli" width="50%">
 
     </div>
-    
+
 
     <p>
         Flere barne- og familieorganisasjoner har applaudert initiativet og uttrykt optimisme rundt
@@ -72,5 +72,4 @@
 
     <p><i>Teksten er skapt ved hjelp av generativ kunstig intelligens.</i></p>
 
-</body>
-</html>
+{% endblock %}

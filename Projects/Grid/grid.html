@@ -1,240 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/grid.css') }}"
-    />
-    <title>Grid</title>
-  </head>
-  <body>
-    <div id="main_grid">
-      <div id="top-bar">
-        <h1>Grids</h1>
-      </div>
 
-      <div id="side-menu">
-        Navigasjon
-      </div>
+{% extends 'base.html' %}
 
-      <main>
-        <div class="gallery">
 
-          <div class="portrait">
-            <h2> Daniel</h2>
-            <div></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-          </div>
-          <div class="portrait">
-            <h2> Daniel</h2>
-            <div></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-          </div>
-          <div class="portrait">
-            <h2> Daniel</h2>
-            <div></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-          </div>
-          <div class="portrait">
-            <h2> Daniel</h2>
-            <div></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-          </div>
-          <div class="portrait">
-            <h2> Daniel</h2>
-            <div></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-          </div>
-          <div class="portrait">
-            <h2> Daniel</h2>
-            <div></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-          </div>
-          <div class="portrait">
-            <h2> Daniel</h2>
-            <div></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-          </div>
-        </div>
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
-            labore doloremque. Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Dolores dolor beatae suscipit quod aperiam
-            molestias deserunt, nesciunt ad voluptate aut possimus, voluptas
-            laborum maiores ratione modi sapiente, tenetur tempora numquam.
-            Architecto eveniet sapiente, quia temporibus molestiae soluta maxime
-            quam ut quidem reiciendis ullam quaerat corrupti et optio quos sit
-            cum facere qui velit harum suscipit nobis iure, libero aut.
-            Quibusdam tempora maxime iste, modi optio blanditiis aperiam
-            voluptates corporis odit ad dicta sint veniam iure est tenetur,
-            cumque, ipsam neque nulla voluptas. Numquam cum dolorem veritatis ea
-            asperiores placeat vel adipisci reiciendis, quae error quisquam
-            culpa facilis repellendus suscipit, eaque sit sequi ipsum cumque
-            nesciunt, omnis unde voluptate! Temporibus, modi eligendi
-            consequuntur natus odio iste possimus repellendus quas veritatis
-            repudiandae, quaerat quis autem id, enim facere! Laboriosam nulla
-            autem facilis voluptates incidunt est omnis sit atque error minima.
-            Ex, illo. Dicta, ipsam. Est earum sed, voluptatibus error eveniet
-            itaque obcaecati? Omnis perspiciatis saepe earum non delectus
-            provident rerum debitis mollitia. Accusamus maxime, laudantium
-            doloribus reprehenderit perferendis aut, animi ipsum quae dolorem
-            recusandae tenetur cum. Porro vitae non sint recusandae aliquid
-            reprehenderit sunt explicabo, iure delectus, dolorum, dignissimos
-            quod perspiciatis illum. Officia accusamus unde atque dignissimos
-            consequuntur animi ullam blanditiis explicabo natus voluptas sequi
-            quisquam, exercitationem deserunt aliquid non expedita minima
-            reprehenderit perspiciatis ipsam voluptate nihil doloribus. Minima
-            voluptatibus maiores corporis voluptatum magnam amet veniam, nobis
-            numquam minus officiis doloremque facilis quisquam facere repellat
-            nisi voluptates porro deleniti natus nihil reprehenderit odit! A,
-            quasi voluptas assumenda odit, debitis molestias fugiat itaque ab
-            consectetur nulla officia nam! Veritatis atque quae minus tenetur
-            eaque hic, animi molestias ipsum in amet esse ratione vero fugiat
-            nesciunt praesentium enim maxime odit porro doloremque soluta optio
-            laborum blanditiis. A cum dolore rerum, quibusdam omnis ea ipsum,
-            nihil in quidem soluta maiores quos quas inventore nulla
-            repellendus.
-          </p>
-        </div>
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
-            labore doloremque. Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Dolores dolor beatae suscipit quod aperiam
-            molestias deserunt, nesciunt ad voluptate aut possimus, voluptas
-            laborum maiores ratione modi sapiente, tenetur tempora numquam.
-            Architecto eveniet sapiente, quia temporibus molestiae soluta maxime
-            quam ut quidem reiciendis ullam quaerat corrupti et optio quos sit
-            cum facere qui velit harum suscipit nobis iure, libero aut.
-            Quibusdam tempora maxime iste, modi optio blanditiis aperiam
-            voluptates corporis odit ad dicta sint veniam iure est tenetur,
-            cumque, ipsam neque nulla voluptas. Numquam cum dolorem veritatis ea
-            asperiores placeat vel adipisci reiciendis, quae error quisquam
-            culpa facilis repellendus suscipit, eaque sit sequi ipsum cumque
-            nesciunt, omnis unde voluptate! Temporibus, modi eligendi
-            consequuntur natus odio iste possimus repellendus quas veritatis
-            repudiandae, quaerat quis autem id, enim facere! Laboriosam nulla
-            autem facilis voluptates incidunt est omnis sit atque error minima.
-            Ex, illo. Dicta, ipsam. Est earum sed, voluptatibus error eveniet
-            itaque obcaecati? Omnis perspiciatis saepe earum non delectus
-            provident rerum debitis mollitia. Accusamus maxime, laudantium
-            doloribus reprehenderit perferendis aut, animi ipsum quae dolorem
-            recusandae tenetur cum. Porro vitae non sint recusandae aliquid
-            reprehenderit sunt explicabo, iure delectus, dolorum, dignissimos
-            quod perspiciatis illum. Officia accusamus unde atque dignissimos
-            consequuntur animi ullam blanditiis explicabo natus voluptas sequi
-            quisquam, exercitationem deserunt aliquid non expedita minima
-            reprehenderit perspiciatis ipsam voluptate nihil doloribus. Minima
-            voluptatibus maiores corporis voluptatum magnam amet veniam, nobis
-            numquam minus officiis doloremque facilis quisquam facere repellat
-            nisi voluptates porro deleniti natus nihil reprehenderit odit! A,
-            quasi voluptas assumenda odit, debitis molestias fugiat itaque ab
-            consectetur nulla officia nam! Veritatis atque quae minus tenetur
-            eaque hic, animi molestias ipsum in amet esse ratione vero fugiat
-            nesciunt praesentium enim maxime odit porro doloremque soluta optio
-            laborum blanditiis. A cum dolore rerum, quibusdam omnis ea ipsum,
-            nihil in quidem soluta maiores quos quas inventore nulla
-            repellendus.
-          </p>
-        </div>
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
-            labore doloremque. Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Dolores dolor beatae suscipit quod aperiam
-            molestias deserunt, nesciunt ad voluptate aut possimus, voluptas
-            laborum maiores ratione modi sapiente, tenetur tempora numquam.
-            Architecto eveniet sapiente, quia temporibus molestiae soluta maxime
-            quam ut quidem reiciendis ullam quaerat corrupti et optio quos sit
-            cum facere qui velit harum suscipit nobis iure, libero aut.
-            Quibusdam tempora maxime iste, modi optio blanditiis aperiam
-            voluptates corporis odit ad dicta sint veniam iure est tenetur,
-            cumque, ipsam neque nulla voluptas. Numquam cum dolorem veritatis ea
-            asperiores placeat vel adipisci reiciendis, quae error quisquam
-            culpa facilis repellendus suscipit, eaque sit sequi ipsum cumque
-            nesciunt, omnis unde voluptate! Temporibus, modi eligendi
-            consequuntur natus odio iste possimus repellendus quas veritatis
-            repudiandae, quaerat quis autem id, enim facere! Laboriosam nulla
-            autem facilis voluptates incidunt est omnis sit atque error minima.
-            Ex, illo. Dicta, ipsam. Est earum sed, voluptatibus error eveniet
-            itaque obcaecati? Omnis perspiciatis saepe earum non delectus
-            provident rerum debitis mollitia. Accusamus maxime, laudantium
-            doloribus reprehenderit perferendis aut, animi ipsum quae dolorem
-            recusandae tenetur cum. Porro vitae non sint recusandae aliquid
-            reprehenderit sunt explicabo, iure delectus, dolorum, dignissimos
-            quod perspiciatis illum. Officia accusamus unde atque dignissimos
-            consequuntur animi ullam blanditiis explicabo natus voluptas sequi
-            quisquam, exercitationem deserunt aliquid non expedita minima
-            reprehenderit perspiciatis ipsam voluptate nihil doloribus. Minima
-            voluptatibus maiores corporis voluptatum magnam amet veniam, nobis
-            numquam minus officiis doloremque facilis quisquam facere repellat
-            nisi voluptates porro deleniti natus nihil reprehenderit odit! A,
-            quasi voluptas assumenda odit, debitis molestias fugiat itaque ab
-            consectetur nulla officia nam! Veritatis atque quae minus tenetur
-            eaque hic, animi molestias ipsum in amet esse ratione vero fugiat
-            nesciunt praesentium enim maxime odit porro doloremque soluta optio
-            laborum blanditiis. A cum dolore rerum, quibusdam omnis ea ipsum,
-            nihil in quidem soluta maiores quos quas inventore nulla
-            repellendus.
-          </p>
-        </div>
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
-            labore doloremque. Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Dolores dolor beatae suscipit quod aperiam
-            molestias deserunt, nesciunt ad voluptate aut possimus, voluptas
-            laborum maiores ratione modi sapiente, tenetur tempora numquam.
-            Architecto eveniet sapiente, quia temporibus molestiae soluta maxime
-            quam ut quidem reiciendis ullam quaerat corrupti et optio quos sit
-            cum facere qui velit harum suscipit nobis iure, libero aut.
-            Quibusdam tempora maxime iste, modi optio blanditiis aperiam
-            voluptates corporis odit ad dicta sint veniam iure est tenetur,
-            cumque, ipsam neque nulla voluptas. Numquam cum dolorem veritatis ea
-            asperiores placeat vel adipisci reiciendis, quae error quisquam
-            culpa facilis repellendus suscipit, eaque sit sequi ipsum cumque
-            nesciunt, omnis unde voluptate! Temporibus, modi eligendi
-            consequuntur natus odio iste possimus repellendus quas veritatis
-            repudiandae, quaerat quis autem id, enim facere! Laboriosam nulla
-            autem facilis voluptates incidunt est omnis sit atque error minima.
-            Ex, illo. Dicta, ipsam. Est earum sed, voluptatibus error eveniet
-            itaque obcaecati? Omnis perspiciatis saepe earum non delectus
-            provident rerum debitis mollitia. Accusamus maxime, laudantium
-            doloribus reprehenderit perferendis aut, animi ipsum quae dolorem
-            recusandae tenetur cum. Porro vitae non sint recusandae aliquid
-            reprehenderit sunt explicabo, iure delectus, dolorum, dignissimos
-            quod perspiciatis illum. Officia accusamus unde atque dignissimos
-            consequuntur animi ullam blanditiis explicabo natus voluptas sequi
-            quisquam, exercitationem deserunt aliquid non expedita minima
-            reprehenderit perspiciatis ipsam voluptate nihil doloribus. Minima
-            voluptatibus maiores corporis voluptatum magnam amet veniam, nobis
-            numquam minus officiis doloremque facilis quisquam facere repellat
-            nisi voluptates porro deleniti natus nihil reprehenderit odit! A,
-            quasi voluptas assumenda odit, debitis molestias fugiat itaque ab
-            consectetur nulla officia nam! Veritatis atque quae minus tenetur
-            eaque hic, animi molestias ipsum in amet esse ratione vero fugiat
-            nesciunt praesentium enim maxime odit porro doloremque soluta optio
-            laborum blanditiis. A cum dolore rerum, quibusdam omnis ea ipsum,
-            nihil in quidem soluta maiores quos quas inventore nulla
-            repellendus.
-          </p>
-        </div>
-      
-      </main>
+{% block head %}
+<link rel="stylesheet" href=" {{ url_for('static', filename='css/grid.css') }} ">
+{% endblock %}
 
-      <address>
-        Blu William Opland <br>
-        hello <br>
-        hei <br>
-        hadet
-      </address>
-      
 
-    </div>
-    <script src="{{ url_for('static', filename='js/serve_placeholder.js') }}"></script>
-  </body>
-</html>
+{% block main %}
+<div class="gallery">
+  <div class="portrait">
+    <h2> Mikal </h2>
+    <div></div>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ducimus reprehenderit laboriosam nostrum culpa. </p>
+  </div>
+  <div class="portrait">
+    <h2> Daniel </h2>
+    <div></div>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ducimus reprehenderit laboriosam nostrum culpa. </p>
+  </div>
+  <div class="portrait">
+    <h2> Hannah </h2>
+    <div></div>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ducimus reprehenderit laboriosam nostrum culpa. </p>
+  </div>
+  <div class="portrait">
+    <h2> Sindre </h2>
+    <div></div>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ducimus reprehenderit laboriosam nostrum culpa. </p>
+  </div>
+  <div class="portrait">
+    <h2> Jenny </h2>
+    <div></div>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ducimus reprehenderit laboriosam nostrum culpa. </p>
+  </div>
+</div>
+{% endblock %}

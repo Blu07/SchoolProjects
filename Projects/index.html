@@ -1,35 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/index.css') }}"
-    />
-    <title>Home</title>
-  </head>
-  <body>
-    <div id="top-bar">
-      <header><h1>Home Page</h1></header>
-    </div>
+{% extends 'base.html' %}
 
-    <div id="side-menu"></div>
 
-    <main>
-      <article>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, ipsum
-          voluptatem.
-        </p>
-        <img class="right" src="#" alt="Bilde av Lorem Ipsum" width="20%">
+{% block head %}
+<link rel="stylesheet" href=" {{ url_for('static', filename='css/index.css') }} ">
+{% endblock %}
 
-      </article>
-      
-    </main>
-    <address>
-      <p>Blu William Opland</p>
-    </address>
-    <script src="{{ url_for('static', filename='js/serve_placeholder.js') }}"></script>
-    </body>
-</html>
+
+{% block main %}
+<p>Hoved</p>
+{% endblock %}
