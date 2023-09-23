@@ -1,6 +1,6 @@
 main > {
 
-    /* Style the header */
+    // Header
     header {
         background-color: #333;
         color: #fff;
@@ -8,7 +8,7 @@ main > {
         padding: 10px 0;
     }
     
-    /* Style navigation menu */
+    // Navigation menu
     * > nav ul {
         list-style-type: none;
         padding: 0;
@@ -26,12 +26,12 @@ main > {
         color: #fff;
     }
     
-    /* Style sections, articles, and aside */
+    // Sections, articles, and aside
     section {
         margin: 20px;
     }
     
-    /* Style the footer */
+    // Footer
     footer {
         background-color: #333;
         color: #fff;
