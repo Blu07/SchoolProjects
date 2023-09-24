@@ -10,10 +10,6 @@ secret_key = secrets.token_hex(16)
 
 main_Folder = 'Projects'
 
-# Define the paths of the css and scss folders
-scss_Folder = 'static/scss'
-css_Folder = 'static/css'
-
 
 app = Flask(__name__, template_folder=main_Folder)
 app.secret_key = secret_key
@@ -113,59 +109,25 @@ def serve_project(project_path):
 
 if __name__ == '__main__':
     
-    
-    # Function to create the thread holding the SASS watcher
-    def run_sass_watcher():
-            sass_watcher_process = subprocess.Popen(['python', 'static/python/sass_watcher.py'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-            sass_watcher_process.communicate()
-    
+    def start_sass_watcher():
+        # Function to create the thread holding the SASS watcher
+        def sass_watcher_thread():
+                sass_watcher_process = subprocess.Popen(['python', 'static/python/sass_watcher.py'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+                sass_watcher_process.communicate()
 
-    def initialize_func():
-        os.system('''
-                  pip install -r requirements.txt \
-                  npm install \
-                  ''')
-
-
-    def do_full_sass_func():
-        print(f"Preprocessing all .scss files in {scss_Folder}.")
-        os.system(f"sass --embed-source-map --update {scss_Folder}:{css_Folder}")
-        print(f"Finished preprocessing all .scss files in {scss_Folder}.")
-
-
-    def start_server():
         # Create a thread to run the SASS watcher
-        sass_watcher_thread = threading.Thread(target=run_sass_watcher)
+        sass_watcher_thread = threading.Thread(target=sass_watcher_thread)
         sass_watcher_thread.daemon = True  # Exit the thread when the main program exits
         sass_watcher_thread.start()
         
-        # Run the app
-        app.run(debug=True)
-    
 
 
-
-    parser = argparse.ArgumentParser(
-        prog='SASS Watcher',
-        description='Watches for changes made to scss files, then updates that css file'
-    )
-    
-    group = parser.add_mutually_exclusive_group()
-
-    group.add_argument('-i', '--init', action='store_true', help='Initialize venv, install python and node modules.')
-    group.add_argument('-f', '--full', action='store_true', help=f'Update all changed .scss files in {scss_Folder}.')
-    group.add_argument('-n', '--normal', action='store_true', help='Default value, run server and Sass Watcher.', default=True)
-    
-    args = parser.parse_args()
-
-
-    if args.init:
-       initialize_func()
-       
-    if args.init or args.full:
-        do_full_sass_func()
         
-    start_server()
+
+    start_sass_watcher()    
+
+    # Run the app
+    app.run(debug=True)
 
 
 
