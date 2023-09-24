@@ -11,8 +11,8 @@ if __name__ == "__main__":
     
     parser = argparse.ArgumentParser(prog='Receive scss/css Filepaths')
 
-    parser.add_argument('scss_path', required=True, help='String of the scss filepath in the workspace.')
-    parser.add_argument('css_path', required=True, help='String of the scss filepath in the workspace.')
+    parser.add_argument('scss_path', help='String of the scss filepath in the workspace.')
+    parser.add_argument('css_path', help='String of the scss filepath in the workspace.')
 
     args = parser.parse_args()
 
