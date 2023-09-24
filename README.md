@@ -1,8 +1,8 @@
 # SchoolProjects
 
-> [!IMPORTANT] \
-> DO _NOT_ EDIT THESE CSS FILES \
-> .SCSS FILES WILL OVERWRITE THEM ON UPDATE!
+> [!IMPORTANT]
+> Do _NOT_ edit .css files in _static/css_; \
+> .scss files from _static/scss_ will overwrite them on update!
 
 
 __At initial download from Git, run commands:__
