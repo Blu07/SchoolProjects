@@ -122,11 +122,18 @@ if __name__ == '__main__':
         description='Watches for changes made to scss files, then updates that css file'
     )
     
-    parser.add_argument('-m', '--mode', choices=['init', 'full_sass', 'normal'], default='normal')
+    group = parser.add_mutually_exclusive_group()
+
+    group.add_argument('-i', '--init', action='store_true', help='Initialize venv, install python and node modules')
+    group.add_argument('-f', '--full', action='store_true')
+    group.add_argument('-n', '--normal', action='store_true')
     
     args = parser.parse_args()
-    initialize = args.mode == 'init'
-    do_full_sass = args.mode in ['init', 'full_sass']
+
+
+    initialize = args.init
+    do_full_sass = initialize or args.full
+
 
     if initialize:
         os.system('''
