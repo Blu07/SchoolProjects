@@ -3,6 +3,7 @@ import os
 import subprocess
 import threading
 import secrets
+import sys
 import re
 import argparse
 
@@ -121,12 +122,21 @@ if __name__ == '__main__':
         description='Watches for changes made to scss files, then updates that css file'
     )
     
-    parser.add_argument('-f', '--full', action='store_true', default=False, required=False)
+    parser.add_argument('-m', '--mode', choices=['init', 'full_sass', 'normal'], default='normal')
     
     args = parser.parse_args()
-    do_full_sass = args.full
-    
-    
+    initialize = args.mode == 'init'
+    do_full_sass = args.mode in ['init', 'full_sass']
+
+    if initialize:
+        os.system('''
+                  python -m venv venv
+                  .\\venv\\Scripts\\activate
+                  pip install flask
+                  pip install watchdog
+                  npm install sass
+                  ''')
+        
 
     if do_full_sass:
         print("Running full preprocess of .scss files...")
@@ -144,3 +154,14 @@ if __name__ == '__main__':
     
     # Run the app on completion
     app.run(debug=True)
+
+
+
+
+    # mode = init:
+    #    pip install flask
+    #    pip install watchdog
+    #    npm install sass
+    #    python static/python/full_sass.py
+
+    # mode = full_sass:
