@@ -130,16 +130,13 @@ if __name__ == '__main__':
 
     if initialize:
         os.system('''
-                  python -m venv venv
-                  .\\venv\\Scripts\\activate
-                  pip install flask
-                  pip install watchdog
-                  npm install sass
+                  pip install -r requirements.txt \
+                  npm install \
                   ''')
         
 
     if do_full_sass:
-        print("Running full preprocess of .scss files...")
+        print("Preprocessing all .scss files...")
         
         # Create a thread to run the full process
         full_sass_thread = threading.Thread(target=run_full_process)

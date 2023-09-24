@@ -8,10 +8,7 @@
 __At initial download from Git, run commands:__
 > python -m venv venv \
 > .\venv\Scripts\activate \
-> pip install flask \
-> pip install watchdog \
-> npm install sass \
-> python app.py --full \
+> python app.py --init \
 > _after_ server starts: _CTRL + C_
 
 
