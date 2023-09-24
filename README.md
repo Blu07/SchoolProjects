@@ -7,7 +7,7 @@
 
 __To initialize the Workspace, run commands:__
 > py -m venv venv \
-> .\venv\Scripts\activate \
+> venv\Scripts\activate \
 > py init.py
 
 
