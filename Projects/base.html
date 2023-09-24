@@ -21,7 +21,8 @@
       </div>
 
       <main>
-        {% block main %}{% endblock %}
+        {% block main %}
+        {% endblock %}
       </main>
 
       <div id="address">
@@ -29,6 +30,9 @@
       </div>
       
     </div>
-    
+
+    {% block scripts %}
+    {% endblock %}
+
     </body>
 </html>

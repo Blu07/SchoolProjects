@@ -10,6 +10,9 @@
   <p id="greeting">Greeting Here</p>
 
   <input type="button" value="Next Greeting" onclick="newGreet()">
+{% endblock %}
 
+
+{% block scripts %}
   <script src="{{ url_for('static', filename='js/flipCard.js') }}"></script>
 {% endblock %}

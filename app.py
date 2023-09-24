@@ -1,15 +1,19 @@
 from flask import Flask, render_template, url_for
+import secrets
 import os
 import subprocess
 import threading
-import secrets
-import sys
 import re
 import argparse
 
 secret_key = secrets.token_hex(16)
 
 main_Folder = 'Projects'
+
+# Define the paths of the css and scss folders
+scss_Folder = 'static/scss'
+css_Folder = 'static/css'
+
 
 app = Flask(__name__, template_folder=main_Folder)
 app.secret_key = secret_key
@@ -43,14 +47,14 @@ def loadProjects():
                 link = relative_path.replace(os.sep, '/')
                 
                 # Add the title and link to the project_pages list
-                project_pages.append((file_name_str, link))
+                project_pages.append((link, file_name_str))
 
     # Sort the project_pages list alphabetically by title
     project_pages.sort(key=lambda x: x[0])
     
     # Generate the link
     html_str = '<nav>'
-    for name, url in project_pages:
+    for url, name in project_pages:
         href = f"{ url_for('serve_project', project_path=url) }"
         link = f'''<a href="{href}">{name}</a>'''
         html_str += link
@@ -58,13 +62,13 @@ def loadProjects():
     html_str += '</nav>'
 
 
-    return html_str
+    return html_str, project_pages
 
 
 
 @app.route('/')
 def index():
-    side_menu_content = loadProjects()
+    side_menu_content, _ = loadProjects()
 
     return render_template('index.html', side_menu_content=side_menu_content, title="Main Page")
 
@@ -77,7 +81,7 @@ def serve_project(project_path):
     path_parts = project_path.split("/")
     num_layers = len(path_parts)
     print(num_layers)
-    side_menu_content = loadProjects()
+    side_menu_content, all_pages = loadProjects()
 
     # Ensure that there is at least one directory and one HTML file
     if len(path_parts) < 2 or not path_parts[-1].endswith(".html"):
@@ -88,6 +92,11 @@ def serve_project(project_path):
     project_name = path_parts[0]
     file_name = path_parts[-1]
 
+    for url, page_name in all_pages:
+        if url == project_path:
+            title = page_name
+            break
+
     # Join the remaining path parts to get the folder structure
     subfolders = "/".join(path_parts[1:-1])
 
@@ -95,7 +104,7 @@ def serve_project(project_path):
     return render_template(
         f"{project_name}/{subfolders}/{file_name}",
         side_menu_content=side_menu_content,
-        title=path_parts[-2]
+        title=title
         )
 
 
@@ -104,17 +113,36 @@ def serve_project(project_path):
 
 if __name__ == '__main__':
     
-    # Define a function to run the SASS watcher
-    def run_full_process():
-        full_sass_process = subprocess.Popen(['python', 'static/python/full_sass.py'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-        full_sass_process.communicate()
-      
-
-    # Define a function to run the SASS watcher
+    
+    # Function to create the thread holding the SASS watcher
     def run_sass_watcher():
             sass_watcher_process = subprocess.Popen(['python', 'static/python/sass_watcher.py'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
             sass_watcher_process.communicate()
     
+
+    def initialize_func():
+        os.system('''
+                  pip install -r requirements.txt \
+                  npm install \
+                  ''')
+
+
+    def do_full_sass_func():
+        print(f"Preprocessing all .scss files in {scss_Folder}.")
+        os.system(f"sass --embed-source-map --update {scss_Folder}:{css_Folder}")
+        print(f"Finished preprocessing all .scss files in {scss_Folder}.")
+
+
+    def start_server():
+        # Create a thread to run the SASS watcher
+        sass_watcher_thread = threading.Thread(target=run_sass_watcher)
+        sass_watcher_thread.daemon = True  # Exit the thread when the main program exits
+        sass_watcher_thread.start()
+        
+        # Run the app
+        app.run(debug=True)
+    
+
 
 
     parser = argparse.ArgumentParser(
@@ -124,48 +152,21 @@ if __name__ == '__main__':
     
     group = parser.add_mutually_exclusive_group()
 
-    group.add_argument('-i', '--init', action='store_true', help='Initialize venv, install python and node modules')
-    group.add_argument('-f', '--full', action='store_true')
-    group.add_argument('-n', '--normal', action='store_true')
+    group.add_argument('-i', '--init', action='store_true', help='Initialize venv, install python and node modules.')
+    group.add_argument('-f', '--full', action='store_true', help=f'Update all changed .scss files in {scss_Folder}.')
+    group.add_argument('-n', '--normal', action='store_true', help='Default value, run server and Sass Watcher.', default=True)
     
     args = parser.parse_args()
 
 
-    initialize = args.init
-    do_full_sass = initialize or args.full
-
-
-    if initialize:
-        os.system('''
-                  pip install -r requirements.txt \
-                  npm install \
-                  ''')
+    if args.init:
+       initialize_func()
+       
+    if args.init or args.full:
+        do_full_sass_func()
         
-
-    if do_full_sass:
-        print("Preprocessing all .scss files...")
-        
-        # Create a thread to run the full process
-        full_sass_thread = threading.Thread(target=run_full_process)
-        full_sass_thread.start()
-        full_sass_thread.join()
-
-
-    # Create a thread to run the SASS watcher
-    sass_watcher_thread = threading.Thread(target=run_sass_watcher)
-    sass_watcher_thread.daemon = True  # Exit the thread when the main program exits
-    sass_watcher_thread.start()
-    
-    # Run the app on completion
-    app.run(debug=True)
+    start_server()
 
 
 
 
-    # mode = init:
-    #    pip install flask
-    #    pip install watchdog
-    #    npm install sass
-    #    python static/python/full_sass.py
-
-    # mode = full_sass:
