@@ -1,11 +1,10 @@
-from flask import Flask, render_template, send_from_directory, url_for
+from flask import Flask, render_template, url_for
 import os
 import subprocess
 import threading
 import secrets
 import re
-import json
-import sys
+import argparse
 
 secret_key = secrets.token_hex(16)
 
@@ -103,23 +102,45 @@ def serve_project(project_path):
 
 
 if __name__ == '__main__':
+    
+    # Define a function to run the SASS watcher
+    def run_full_process():
+        full_sass_process = subprocess.Popen(['python', 'static/python/full_sass.py'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        full_sass_process.communicate()
+      
+
     # Define a function to run the SASS watcher
     def run_sass_watcher():
-        bool_full_sass = len(sys.argv) > 1 and sys.argv[1] == '--full-sass'
-        
-        if bool_full_sass:
-            print("Preprocessing all .sass files.")
-            sass_watcher_process = subprocess.Popen(['python', 'static/python/sass_watcher.py', '--full-sass'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-            sass_watcher_process.communicate()
-        else:
-            print("Skipping full preprocess of .sass files.")
             sass_watcher_process = subprocess.Popen(['python', 'static/python/sass_watcher.py'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
             sass_watcher_process.communicate()
     
+
+
+    parser = argparse.ArgumentParser(
+        prog='SASS Watcher',
+        description='Watches for changes made to scss files, then updates that css file'
+    )
+    
+    parser.add_argument('-f', '--full', action='store_true', default=False, required=False)
+    
+    args = parser.parse_args()
+    do_full_sass = args.full
+    
+    
+
+    if do_full_sass:
+        print("Running full preprocess of .scss files...")
+        
+        # Create a thread to run the full process
+        full_sass_thread = threading.Thread(target=run_full_process)
+        full_sass_thread.start()
+        full_sass_thread.join()
+
 
     # Create a thread to run the SASS watcher
     sass_watcher_thread = threading.Thread(target=run_sass_watcher)
     sass_watcher_thread.daemon = True  # Exit the thread when the main program exits
     sass_watcher_thread.start()
     
-    app.run()
+    # Run the app on completion
+    app.run(debug=True)

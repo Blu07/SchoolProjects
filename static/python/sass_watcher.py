@@ -1,12 +1,13 @@
 import os
 import time
-import sys
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
 # Define the paths of the css ans scss folders
 scss_folder = 'static/scss'
 css_folder = 'static/css'
+
+
 
 # Define the command to compile SASS
 class SASSHandler(FileSystemEventHandler):
@@ -21,26 +22,8 @@ class SASSHandler(FileSystemEventHandler):
 
 
 
-def compile_sass():
-    for root, _, files in os.walk(scss_folder):
-        for file in files:
-            if file.endswith(".scss"):
-                scss_path = os.path.join(root, file)
-                css_path = os.path.join(css_folder, os.path.splitext(file)[0] + '.css')
-                sass_command = f"sass --embed-source-map {scss_path} {css_path}"
-                os.system(sass_command)
-
-
-
 
 def main():
-    
-    # Check for the --full-sass command-line argument
-    if len(sys.argv) > 1 and sys.argv[1] == '--full-sass':
-        print(f"Preprocessing all .sass files in {scss_folder}.")
-        compile_sass()
-        print("Sass preprocessing complete.")
-    
     
     # Create an observer that monitors the directory
     observer = Observer()
@@ -56,6 +39,7 @@ def main():
     except KeyboardInterrupt:
         observer.stop()
     observer.join()
+
 
 
 
