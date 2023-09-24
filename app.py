@@ -109,22 +109,22 @@ def serve_project(project_path):
 
 if __name__ == '__main__':
     
-    def start_sass_watcher():
+    def open_sass_watcher_thread():
         # Function to create the thread holding the SASS watcher
         def sass_watcher_thread():
                 sass_watcher_process = subprocess.Popen(['python', 'static/python/sass_watcher.py'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
                 sass_watcher_process.communicate()
 
         # Create a thread to run the SASS watcher
-        sass_watcher_thread = threading.Thread(target=sass_watcher_thread)
-        sass_watcher_thread.daemon = True  # Exit the thread when the main program exits
-        sass_watcher_thread.start()
+        watcher_thread = threading.Thread(target=sass_watcher_thread)
+        watcher_thread.daemon = True  # Exit the thread when the main program exits
+        watcher_thread.start()
         
 
 
         
 
-    start_sass_watcher()    
+    open_sass_watcher_thread()    
 
     # Run the app
     app.run(debug=True)
