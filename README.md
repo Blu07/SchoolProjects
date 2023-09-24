@@ -5,14 +5,14 @@
 > .scss files from _static/scss_ will overwrite them on update!
 
 
-__At initial download from Git, run commands:__
+__After new sync from Git, run commands:__
 > python -m venv venv \
 > .\venv\Scripts\activate \
 > python app.py --init \
-> _after_ server starts: _CTRL + C_
+> _CTRL + C_ to terminate
 
 
-__To activate server:__
+__To activate server during development session:__
 > python app.py \
 > _CTRL + C_ to terminate
 
