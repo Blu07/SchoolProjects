@@ -10,7 +10,7 @@ def compile_all_sass():
             if file.endswith(".scss"):
                 scss_path = os.path.join(root, file)
                 css_path = os.path.join(css_folder, os.path.splitext(file)[0] + '.css')
-                sass_command = f"sass --embed-source-map {scss_path} {css_path}"
+                sass_command = f"sass --embed-source-map --update {scss_path} {css_path}"
                 os.system(sass_command)
 
 
