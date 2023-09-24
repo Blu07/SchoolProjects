@@ -88,20 +88,19 @@ def serve_project(project_path):
     project_name = path_parts[0]
     file_name = path_parts[-1]
 
+    title = file_name[:-5]
+    
     for url, page_name in all_pages:
         if url == project_path:
             title = page_name
             break
+    
 
     # Join the remaining path parts to get the folder structure
     subfolders = "/".join(path_parts[1:-1])
 
     # Render the template with the appropriate folder structure
-    return render_template(
-        f"{project_name}/{subfolders}/{file_name}",
-        side_menu_content=side_menu_content,
-        title=title
-        )
+    return render_template(f"{project_name}/{subfolders}/{file_name}", side_menu_content=side_menu_content, title=title)
 
 
 
