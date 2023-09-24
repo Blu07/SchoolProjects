@@ -1,4 +1,4 @@
-from app import css_Folder, scss_Folder
+from init import css_Folder, scss_Folder
 from full_sass import do_full_sass
 import os
 

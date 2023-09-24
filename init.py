@@ -1,6 +1,9 @@
 from static.python.full_sass import do_full_sass
 import os
 
+scss_Folder = 'static/scss'
+css_Folder = 'static/css'
+
 if __name__=='__main__':
     
     def do_initialize():
@@ -9,7 +12,7 @@ if __name__=='__main__':
 
 
     def do_full_sass():
-       os.system('py', 'static/python/full_sass.py')
+       os.system('py', 'static/python/full_sass.py', scss_Folder, css_Folder)
         
 
 

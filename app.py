@@ -4,7 +4,6 @@ import os
 import subprocess
 import threading
 import re
-import argparse
 
 secret_key = secrets.token_hex(16)
 
