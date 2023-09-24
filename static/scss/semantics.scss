@@ -1,4 +1,4 @@
-main > {
+main {
 
     // Header
     header {
@@ -9,7 +9,7 @@ main > {
     }
     
     // Navigation menu
-    * > nav ul {
+    nav ul {
         list-style-type: none;
         padding: 0;
     }
