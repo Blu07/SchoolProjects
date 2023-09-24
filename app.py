@@ -1,4 +1,5 @@
 from flask import Flask, render_template, url_for
+from init import scss_Folder, css_Folder
 import secrets
 import os
 import subprocess
@@ -111,7 +112,7 @@ if __name__ == '__main__':
     def open_sass_watcher_thread():
         # Function to create the thread holding the SASS watcher
         def sass_watcher_thread():
-                sass_watcher_process = subprocess.Popen(['python', 'static/python/sass_watcher.py'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+                sass_watcher_process = subprocess.Popen(['python', 'static/python/sass_watcher.py', scss_Folder, css_Folder], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
                 sass_watcher_process.communicate()
 
         # Create a thread to run the SASS watcher

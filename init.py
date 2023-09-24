@@ -12,7 +12,7 @@ if __name__=='__main__':
 
 
     def do_full_sass():
-       os.system('py', 'static/python/full_sass.py', scss_Folder, css_Folder)
+       os.system(f"'py', 'static/python/full_sass.py', {scss_Folder}, {css_Folder}")
         
 
 
