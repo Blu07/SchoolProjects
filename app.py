@@ -1,10 +1,12 @@
 from flask import Flask, render_template, url_for
 from init import scss_Folder, css_Folder
+from static.python.full_sass import do_full_sass
 import secrets
 import os
 import subprocess
 import threading
 import re
+import argparse
 
 secret_key = secrets.token_hex(16)
 
@@ -108,6 +110,16 @@ def serve_project(project_path):
 
 if __name__ == '__main__':
     
+
+    parser = argparse.ArgumentParser(prog='Run application')
+
+    parser.add_argument('-f', '--full', action='store_true', help='Run application with a full scss preprocess before.')
+    parser.add_argument('-n', '--normal', action='store_true', help='Run application as normal. Default.', default=True)
+    
+    args = parser.parse_args()
+
+
+
     def open_sass_watcher_thread():
         # Function to create the thread holding the SASS watcher
         def sass_watcher_thread():
@@ -119,9 +131,10 @@ if __name__ == '__main__':
         watcher_thread.daemon = True  # Exit the thread when the main program exits
         watcher_thread.start()
         
+    _ = "New-Item -Path $profile -Type File -Force"
 
-
-        
+    if args.full:
+        do_full_sass(scss_Folder, css_Folder)
 
     open_sass_watcher_thread()    
 
