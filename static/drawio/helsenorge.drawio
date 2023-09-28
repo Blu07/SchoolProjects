@@ -1,47 +1,89 @@
 <mxfile host="65bd71144e">
     <diagram id="lRSSUsi64icud2v2-DGA" name="Page-1">
-        <mxGraphModel dx="532" dy="652" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1119" dy="779" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" vertex="1" parent="1">
+                <mxCell id="3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" parent="1" vertex="1">
                     <mxGeometry x="30" y="20" width="780" height="1040" as="geometry"/>
                 </mxCell>
-                <mxCell id="5" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="40" y="40" width="740" height="60" as="geometry"/>
+                <mxCell id="5" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="40" width="780" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="8" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="45" y="45" width="115" height="50" as="geometry"/>
+                <mxCell id="8" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="130" y="45" width="115" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="9" value="Meny" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="165" y="45" width="45" height="50" as="geometry"/>
+                <mxCell id="9" value="Meny" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="250" y="45" width="45" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="10" value="Søk" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="215" y="45" width="45" height="50" as="geometry"/>
+                <mxCell id="10" value="Søk" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="45" width="45" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="11" value="Logg Inn" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="710" y="45" width="60" height="50" as="geometry"/>
+                <mxCell id="11" value="Logg Inn" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="630" y="45" width="60" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="12" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=none;arcSize=3;" vertex="1" parent="1">
-                    <mxGeometry x="45" y="110" width="740" height="280" as="geometry"/>
+                <mxCell id="12" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;arcSize=3;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="20" width="780" height="370" as="geometry"/>
                 </mxCell>
-                <mxCell id="13" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=none;arcSize=16;" vertex="1" parent="1">
-                    <mxGeometry x="55" y="120" width="225" height="240" as="geometry"/>
+                <mxCell id="14" value="Simpel Meny med&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;" parent="1" vertex="1">
+                    <mxGeometry x="165" y="150" width="125" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="14" value="Simpel Meny med&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;" vertex="1" parent="1">
-                    <mxGeometry x="105" y="160" width="125" height="30" as="geometry"/>
+                <mxCell id="15" value="Viktig funksjon 1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="127.5" y="200" width="200" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="15" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="70" y="230" width="200" height="30" as="geometry"/>
+                <mxCell id="16" value="Viktig funksjon 2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="127.5" y="250" width="200" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="16" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="70" y="265" width="200" height="30" as="geometry"/>
+                <mxCell id="17" value="Viktig funksjon 3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="127.5" y="300" width="200" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="17" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="70" y="305" width="200" height="30" as="geometry"/>
+                <mxCell id="18" value="Bilde av vennlig person" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=none;arcSize=2;" parent="1" vertex="1">
+                    <mxGeometry x="425" y="190" width="207.5" height="175" as="geometry"/>
                 </mxCell>
-                <mxCell id="18" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=none;arcSize=16;" vertex="1" parent="1">
-                    <mxGeometry x="340" y="180" width="270" height="185" as="geometry"/>
+                <mxCell id="19" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=default;fillColor=none;arcSize=0;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="900" width="780" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Informasjon&lt;br&gt;kontakt&lt;br&gt;osv" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;strokeColor=default;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="155" y="925" width="125" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="Informasjon" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;strokeColor=default;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="352.5" y="925" width="125" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="Last ned appen" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;strokeColor=default;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="565" y="925" width="125" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=default;fillColor=none;arcSize=0;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="800" width="780" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="&lt;font style=&quot;font-size: 21px;&quot;&gt;Søk&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="190" y="840" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Hovedfunksjon&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=default;fontSize=21;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="140" y="420" width="117.5" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="&#10;&lt;span style=&quot;color: rgb(240, 240, 240); font-family: Helvetica; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(42, 37, 47); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Hovedfunksjon&lt;/span&gt;&#10;&#10;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=default;fontSize=21;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="140" y="540" width="117.5" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="&#10;&lt;span style=&quot;color: rgb(240, 240, 240); font-family: Helvetica; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(42, 37, 47); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Hovedfunksjon&lt;/span&gt;&#10;&#10;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=default;fontSize=21;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="280" y="540" width="117.5" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="&#10;&lt;span style=&quot;color: rgb(240, 240, 240); font-family: Helvetica; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(42, 37, 47); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Hovedfunksjon&lt;/span&gt;&#10;&#10;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=default;fontSize=21;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="420" y="540" width="117.5" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="&#10;&lt;span style=&quot;color: rgb(240, 240, 240); font-family: Helvetica; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(42, 37, 47); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Hovedfunksjon&lt;/span&gt;&#10;&#10;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=default;fontSize=21;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="280" y="420" width="117.5" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="&#10;&lt;span style=&quot;color: rgb(240, 240, 240); font-family: Helvetica; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(42, 37, 47); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Hovedfunksjon&lt;/span&gt;&#10;&#10;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=default;fontSize=21;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="420" y="420" width="117.5" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="&#10;&lt;span style=&quot;color: rgb(240, 240, 240); font-family: Helvetica; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(42, 37, 47); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Hovedfunksjon&lt;/span&gt;&#10;&#10;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=default;fontSize=21;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="540" width="117.5" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="&#10;&lt;span style=&quot;color: rgb(240, 240, 240); font-family: Helvetica; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(42, 37, 47); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Hovedfunksjon&lt;/span&gt;&#10;&#10;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=default;fontSize=21;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="420" width="117.5" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="Annet innhold" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=default;fillColor=none;arcSize=0;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="660" width="780" height="140" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
