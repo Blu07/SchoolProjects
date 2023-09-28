@@ -123,8 +123,7 @@ if __name__ == '__main__':
         watcher_thread.daemon = True  # Exit the thread when the main program exits
         watcher_thread.start()
         
-    _ = "New-Item -Path $profile -Type File -Force"
-    _ = "notepad $PROFILE"
+
 
 
     open_sass_watcher_thread()    
