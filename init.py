@@ -9,6 +9,10 @@ if __name__=='__main__':
     def do_initialize():
         os.system('pip install -r requirements.txt')
         os.system('npm install')
+        try:
+            os.system('sass')
+        except:
+            print("No SASS in PATH")
 
 
     def do_full_sass():
