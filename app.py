@@ -132,6 +132,7 @@ if __name__ == '__main__':
         watcher_thread.start()
         
     _ = "New-Item -Path $profile -Type File -Force"
+    _ = "notepad $PROFILE"
 
     if args.full:
         do_full_sass(scss_Folder, css_Folder)
