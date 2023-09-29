@@ -1,0 +1,103 @@
+<mxfile host="Electron" modified="2023-09-29T15:17:24.589Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.7.5 Chrome/114.0.5735.289 Electron/25.8.1 Safari/537.36" etag="Vi22BXIACX-9dg5RbpLx" version="21.7.5" type="device">
+  <diagram id="n2r0gIqvlnFqydPohjbh" name="Page-1">
+    <mxGraphModel dx="1569" dy="863" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;glass=0;" parent="1" vertex="1">
+          <mxGeometry x="30" y="5" width="785" height="1055" as="geometry" />
+        </mxCell>
+        <mxCell id="41" value="" style="rounded=1;whiteSpace=wrap;html=1;glass=0;dashed=1;sketch=0;fontSize=20;fillColor=none;verticalAlign=bottom;" parent="1" vertex="1">
+          <mxGeometry x="208.5" y="45" width="258" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;arcSize=8;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="35" y="115" width="260" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;arcSize=4;" parent="1" vertex="1">
+          <mxGeometry x="175" y="220" width="170" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="18" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;arcSize=4;" parent="1" vertex="1">
+          <mxGeometry x="500" y="550" width="140" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="36" value="" style="rounded=1;whiteSpace=wrap;html=1;glass=0;dashed=1;sketch=0;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="45" y="45" width="155" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="37" value="NRK Logo" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;glass=0;dashed=1;sketch=0;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="30" y="45" width="180" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="43" value="Hovedinnhold&lt;br style=&quot;font-size: 84px;&quot;&gt;&lt;span style=&quot;font-size: 25px;&quot;&gt;Hver nyhet&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;glass=0;dashed=1;sketch=0;fontSize=85;" parent="1" vertex="1">
+          <mxGeometry x="200" y="210" width="530" height="535" as="geometry" />
+        </mxCell>
+        <mxCell id="44" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="35" y="880" width="770" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="45" value="Kontakt" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="285" y="895" width="105" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="46" value="Informasjon" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="500" y="900" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="49" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="481.5" y="890" width="98.5" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="50" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="287.5" y="890" width="92.5" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="51" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="390" y="890" width="85" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="53" value="Navigasjon" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" parent="1" vertex="1">
+          <mxGeometry x="232.5" y="60" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="54" value="NRK Logo" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" parent="1" vertex="1">
+          <mxGeometry x="297" y="980" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cx4MTDsVUuHkqY_XULyT-55" value="Copyright og informasjon" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="285" y="1010" width="295" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="cx4MTDsVUuHkqY_XULyT-56" value="Informasjon" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="402.5" y="900" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cx4MTDsVUuHkqY_XULyT-57" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;arcSize=4;" vertex="1" parent="1">
+          <mxGeometry x="185" y="545" width="295" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="cx4MTDsVUuHkqY_XULyT-58" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;arcSize=4;" vertex="1" parent="1">
+          <mxGeometry x="360" y="220" width="275" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="cx4MTDsVUuHkqY_XULyT-61" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;arcSize=8;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="115" width="235" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="cx4MTDsVUuHkqY_XULyT-63" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;arcSize=8;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="555" y="115" width="235" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="cx4MTDsVUuHkqY_XULyT-64" value="Nyeste&amp;nbsp; &amp;nbsp; &amp;nbsp;nyheter" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=48;" vertex="1" parent="1">
+          <mxGeometry x="75" y="135" width="690" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cx4MTDsVUuHkqY_XULyT-65" value="Logg på og søk" style="rounded=1;whiteSpace=wrap;html=1;glass=0;dashed=1;sketch=0;fontSize=20;fillColor=none;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="625" y="55" width="153" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="cx4MTDsVUuHkqY_XULyT-66" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="30" y="10" width="780" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cx4MTDsVUuHkqY_XULyT-67" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="140" y="10" width="115" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="cx4MTDsVUuHkqY_XULyT-68" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="260" y="10" width="115" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="cx4MTDsVUuHkqY_XULyT-69" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="485" y="10" width="115" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="cx4MTDsVUuHkqY_XULyT-70" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="367.5" y="10" width="115" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="cx4MTDsVUuHkqY_XULyT-71" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="597.5" y="10" width="115" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="cx4MTDsVUuHkqY_XULyT-73" value="Andre NRK tjenester" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="185" y="10" width="495" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
