@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href=" {{ url_for('static', filename='images/logo/favicon/Logodark.svg') }} ">
     <link rel="stylesheet" href=" {{ url_for('static', filename='css/base.css') }} ">
     <title>{{ title | safe }}</title>
     {% block head %}{% endblock %}
@@ -11,26 +12,33 @@
     <div id="main-grid">
 
       <div id="top-bar">
-        <div id="logo-text">
-          Hei på deg!
+        <div id="left">
+          <img id="logo"
+            src=" {{ url_for('static', filename='images/logo/logoredandtext.svg') }} "
+            alt="Logo, Blu W. Opland"
+            />
+          
+          
+          <h1 id="page-title">
+            {{ title | safe }}
+          </h1>
+          
+          
         </div>
-        
-        <div id="page-title">
-          <h1>{{ title | safe }}</h1>
-        </div>
-        
-        <div id="search-bar">
-          Søk etter...
-        </div>
+        <div id="right">
+          <div id="search">
+            <input type="search" name="search" id="main">
+          </div>
 
-        <div id="top-bar-menu">
-          Meny
-        </div>
+          <div id="menu">
+            Meny
+            
+          </div>
 
-        <div id="profile-menu">
-          Profil
+          <div id="profile">
+            Profil
+          </div>
         </div>
-
 
       </div>
 
