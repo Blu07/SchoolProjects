@@ -11,37 +11,25 @@
   <body>
     <div id="main-grid">
 
-      <div id="top-bar">
-        <div id="left">
-          <img id="logo"
-            src=" {{ url_for('static', filename='images/logo/logoredandtext.svg') }} "
-            alt="Logo, Blu W. Opland"
-            />
-          
-          
-          <h1 id="page-title">
-            {{ title | safe }}
-          </h1>
-          
-          
+      <div id='top-bar'>
+       
+        <div class="logo-red">
+            <a href=" {{ url_for('index') }} "><img src=" {{ url_for('static', filename='images/logo/logored.svg') }} " alt="Logo; B W O" /></a>
         </div>
-        <div id="right">
-          <div id="search">
-            Søk
-            <!--<input type="search" name="q" id="main" placeholder="Search...">-->
-          </div>
-
-          <div id="menu">
-            Meny
-            
-          </div>
-
-          <div id="profile">
-            Profil
-          </div>
+        <div class="logo-text">
+            <a href=" {{ url_for('index') }} "><img src=" {{ url_for('static', filename='images/logo/logotext.svg') }} " alt="Logo; Blu W. Opland" /></a>
         </div>
 
-      </div>
+        <div class="title">
+            <h1> {{ title | safe }} </h1>
+        </div>
+
+        <div class="search">SEARCH <img src="#" alt=" "></div>
+        <div class="menu">MENU <img src="#" alt=" "></div>
+        <div class="profile">PROFILE <img src="#" alt=" "></div>
+    </div>
+    
+    
 
       <div id="side-menu">
         {{ side_menu_content | safe}}
