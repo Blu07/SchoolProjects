@@ -8,10 +8,6 @@ $primary-background-color-lighter: adjust-color($color: $primary-background-colo
 $primary-color: rgb(226, 219, 212);
 $secondary-color: blue;
 
-$html-margin-sides: 2cm;
-$html-margins: 2*$html-margin-sides;
-
-
 
 
 
@@ -26,7 +22,7 @@ html {
 }
 
 body {
-  margin: 0px $html-margin-sides;
+  margin: 0px 2cm 0px 10px;
   padding: 0px;
   overflow-x: hidden;
 }
@@ -225,37 +221,39 @@ body {
   
   // Global Main 
   main {
-    display: flex;
-    flex-flow: column wrap;
     flex: 1;
     
     grid-column: 2;
     grid-row: 2;
     min-height: calc(100dvh - $top-bar-height-total); // View-height - top-bar, address is always right under bottom line when scrolled up 
     
-    
-
+  
     width: 100%;
 
     
     * {
       margin-bottom: 2px;
       padding: 4px;
+
     }
     
+    p {
+     
+      line-height: 1.8;
+      margin: 4px;
+      padding: 3px 5px;
+    }
+
+
+    section {
+      padding: 0px;
+    }
     
     > * {
-      display: flex;
-      flex-flow: row wrap;
+    
+     
       background-color: $primary-background-color;
       
-      > p {
-        background-color: rgba(58, 58, 58, 0.4);
-        flex: 1;
-        
-        margin: 10px;
-        padding: 3px 5px;
-      }
       
       > img {
         display: block;
@@ -264,17 +262,9 @@ body {
         
         max-width: 30%;
         min-width: 3cm;
-        margin: 10px;
+        margin: 10px 0px;
         padding: 3px 5px;
         
-        
-        &.right {
-          margin-left: -4px;
-        }
-        
-        &.left {
-          margin-right: -4px;
-        }
       }
     }
   }
@@ -301,14 +291,21 @@ body {
   // Lists 
   ul,
   ol {
-    list-style-type: none;
+    flex-flow: column;
     width: 50%;
-    min-width: 150px;
+    min-width: 8%;
+    margin-top: 5px;
+    
+  }
+
+  ul {
+    list-style-type: disc;
   }
   
   li {
-    background-color: rgba(8, 243, 165, 0.742);
+    
     margin: 2px;
+    margin-left: 40px;
     padding: 2px;
     border-radius: 2px;
   }
