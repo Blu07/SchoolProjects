@@ -1,21 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href=" {{ url_for('static', filename='css/common.css') }} ">
+    <link rel="icon" type="image/x-icon" href=" {{ url_for('static', filename='images/logo/favicon/Logodark.svg') }} ">
+    <link rel="stylesheet" href=" {{ url_for('static', filename='css/base.css') }} ">
     <title>{{ title | safe }}</title>
     {% block head %}{% endblock %}
   </head>
   <body>
     <div id="main-grid">
 
-      <div id="top-bar">
-        <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='images/logo/img/panorama-sky.jpg') }}" alt="Logo"></a>
-        <h1>{{ title | safe }}</h1>
-        <a href="../Projects/Nyheter/artikkelOversikt.html"></a>
-        
-      </div>
+      <div id='top-bar'>
+       
+        <div class="logo-red">
+            <a href=" {{ url_for('index') }} "><img src=" {{ url_for('static', filename='images/logo/logored.svg') }} " alt="Logo; B W O" /></a>
+        </div>
+        <div class="logo-text">
+            <a href=" {{ url_for('index') }} "><img src=" {{ url_for('static', filename='images/logo/logotext.svg') }} " alt="Logo; Blu W. Opland" /></a>
+        </div>
+
+        <div class="title">
+            <h1> {{ title | safe }} </h1>
+        </div>
+
+        <div class="search"> <p>Search... <img src="#" alt=" "> </p> </div>
+        <div class="menu"> <p>Menu <img src="#" alt=" "> </p> </div>
+        <div class="profile"> <p>Profile <img src="#" alt=" "> </p> </div>
+    </div>
+    
+    
 
       <div id="side-menu">
         {{ side_menu_content | safe}}

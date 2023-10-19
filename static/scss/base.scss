@@ -1,0 +1,470 @@
+//  Fallback and standard styles for all HTML docs.
+
+
+$primary-background-color: rgb(33, 34, 35);
+$primary-background-color-darker: adjust-color($color: $primary-background-color, $red: -1, $green: -2, $blue: -1);
+$primary-background-color-lighter: adjust-color($color: $primary-background-color, $red: 10, $green: 10, $blue: 10);
+
+$primary-color: rgb(226, 219, 212);
+$secondary-color: blue;
+
+
+
+
+// Structure
+html {
+  background-color: $primary-background-color;
+  color: $primary-color;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+  padding: 0px;
+  border-width: 0px;
+}
+
+body {
+  margin: 0px 2cm 0px 10px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+
+
+
+// Globals 
+// Main Grid 
+#main-grid {
+  
+  $top-bar-padding-top: 25px;
+  $top-bar-padding-bottom: 10px;
+  
+  $top-bar-height: 70px;
+  $top-bar-height-total: calc($top-bar-height + $top-bar-padding-top + $top-bar-padding-bottom);
+
+  $address-height: 50px;
+  $address-height-total: 50px;
+
+  $side-menu-width: 4cm;
+  
+  display: grid;
+  
+  grid-template-columns: min-content 1fr;
+
+  margin: 0px;
+  padding: 0px;
+
+  column-gap: 10px;
+
+
+
+  // Global Top Bar 
+  #top-bar {
+    flex-flow: row wrap;
+    grid-column: 1 / span 2;
+
+    grid-template-columns: 69px 1fr;
+    grid-auto-rows: 1fr;
+    
+    padding-top: $top-bar-padding-top;
+    padding-bottom: $top-bar-padding-bottom;
+    
+    
+    
+    position: sticky;
+    top: 0;
+    
+    background-image:linear-gradient($primary-background-color 80%, transparent);
+    
+    > * {
+      box-sizing: border-box;
+    }
+    
+    * {
+      margin: 0;
+      white-space: nowrap;
+    }
+    
+    
+    // DEFAULT: Extra small devices (phones and smaller devices, 600px and down)
+    display: grid;
+    row-gap: 6px;
+
+    width: 100%;
+
+
+    .logo-red {
+      grid-row: 1;
+      grid-column: 1;
+      
+      padding: 4px;
+      width: 69px;
+      align-items: center;
+      justify-content: center;
+
+      a img {
+        display: block;
+        width: 100%;
+        
+      }
+    }
+
+    .logo-text {
+      display: none;
+      padding: 8px 0px 0px;
+      width: 150px;
+      align-items: center;
+      justify-content: center;
+
+      a img {
+        display: block;
+        width: 100%;
+        align-self: center;
+        justify-self: center;
+        
+      }
+    }
+    
+    .title {
+      grid-row: 1;
+      grid-column: 2 / span 1;
+      
+      
+      flex: 1;
+      min-width: 0;
+      margin-left: 25px;
+      
+      
+    }
+
+    .search {grid-row: 2}
+    .menu  {grid-row: 3}
+    .profile {grid-row: 4}
+
+
+    .search,
+    .menu,
+    .profile {
+      grid-column: 1 / 3;
+      width: 100%;
+      height: 100%;
+      
+      text-align: center;
+
+      margin: 0px 5px;
+      border: 2px solid $primary-background-color-lighter;
+      border-radius: 4px;
+      background-color: $primary-background-color-darker;
+      
+    }
+    
+    // Small devices (portrait tablets and large phones, 600px and up)
+    @media only screen and (min-width: 600px) {
+      display: flex;
+      flex-flow: row nowrap;
+      height: $top-bar-height;
+      
+      .search,
+      .menu,
+      .profile {
+        aspect-ratio: 1 / 1;
+        width: auto;
+        height: 70%;
+      }
+    }
+
+  }
+    
+    
+
+
+
+  
+  // Global Side Menu 
+  #side-menu {
+    display: none;
+
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+    
+    padding: 0px 4px;
+    border-radius: 5px;
+    
+    position: sticky;
+    top: $top-bar-height-total;
+
+    box-sizing: border-box;
+    
+    height: calc(100dvh - $top-bar-height - $address-height-total); // View-height - top-bar - padding of self 
+    width: $side-menu-width;
+    
+    background-color: $primary-background-color-darker;
+    
+    nav {
+      display: flex;
+      flex-flow: column nowrap;
+      overflow-y: auto;
+      align-items: stretch;
+    
+      a {
+        display: block;
+        background-color: rgba(127, 164, 196, 0.8);
+        padding: 4px;
+        margin: 2px;
+        border-radius: 3px;
+      }
+    }
+  }
+    
+
+
+
+  
+  
+  // Global Main 
+  main {
+    flex: 1;
+    
+    grid-column: 2;
+    grid-row: 2;
+    min-height: calc(100dvh - $top-bar-height-total); // View-height - top-bar, address is always right under bottom line when scrolled up 
+    
+  
+    width: 100%;
+
+    
+    * {
+      margin-bottom: 2px;
+      padding: 4px;
+
+    }
+    
+    p {
+     
+      line-height: 1.8;
+      margin: 4px;
+      padding: 3px 5px;
+    }
+
+
+    section {
+      padding: 0px;
+    }
+    
+    > * {
+    
+     
+      background-color: $primary-background-color;
+      
+      
+      > img {
+        display: block;
+        background-color: rgba(58, 58, 58, 0.4);
+        flex-basis: auto;
+        
+        max-width: 30%;
+        min-width: 3cm;
+        margin: 10px 0px;
+        padding: 3px 5px;
+        
+      }
+    }
+  }
+  
+  
+  // Global Address 
+  #address {
+    bottom: 0px;
+    padding: 4px;
+
+    grid-row: 3;
+    grid-column: 2;
+    
+    height: $address-height;
+    min-height: 50px;
+    
+    background-color: rgba(54, 47, 38, 0.267);
+  }
+  
+  
+  //
+  
+  
+  // Lists 
+  ul,
+  ol {
+    flex-flow: column;
+    width: 50%;
+    min-width: 8%;
+    margin-top: 5px;
+    
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+  
+  li {
+    
+    margin: 2px;
+    margin-left: 40px;
+    padding: 2px;
+    border-radius: 2px;
+  }
+  
+  
+  
+  
+  // Tables 
+  
+  // Main Table Element
+  table {
+    border-collapse: separate;
+    margin: 10px;
+    border-width: 1px 1px 0.8px 0.8px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.4)
+      rgba(0, 0, 0, 0.8) rgba(0, 0, 0, 0.8);
+  }
+
+
+  // Table-head and Table-Data 
+  // Shared Styles 
+  th,
+  td {
+    border-width: 0.8px 0.8px 1px 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.8) rgba(0, 0, 0, 0.8) rgba(255, 255, 255, 0.4)
+      rgba(255, 255, 255, 0.4);
+    padding: 4px 7px;
+  }
+
+  // Separate Styles 
+  th {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  td {
+    background-color: rgba(0, 0, 0, 0.05);
+
+    img {
+      display: block;
+      min-block-size: 100px;
+      margin: auto auto;
+    }
+  }
+
+
+
+    // Medium devices (landscape tablets, 768px and up)
+    @media only screen and (min-width: 768px) {
+    }
+    
+    
+    // Large devices (laptops/desktops, 992px and up) 
+    @media only screen and (min-width: 992px) {
+      #top-bar .logo-text {
+        display: block;
+        width: 300px;
+      }
+
+      #side-menu {
+        display: block;
+      }
+
+    }
+    
+    // Large devices (laptops/desktops, 1096px and up) 
+    @media only screen and (min-width: 1096px) {
+      #top-bar .search {
+        width: 140px;
+        aspect-ratio: auto;
+      }
+    }
+    
+    // Extra large devices (large laptops and desktops, 1200px and up) 
+    @media only screen and (min-width: 1200px) {
+      #top-bar .menu {
+        width: 140px;
+        aspect-ratio: auto;
+      }
+    }
+
+    // Largest devices (largest laptops and desktops, 1440px and up) 
+    @media only screen and (min-width: 1440px) {
+      #top-bar .profile {
+        width: 140px;
+        aspect-ratio: auto;
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+  
+  
+  
+  
+// Links
+a {
+  color: rgb(79, 65, 2);
+  text-shadow: 0.5px 0.2px black;
+}
+
+a:link {
+  color: rgb(214, 4, 4);
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(170, 14, 14);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(167, 10, 10);
+  text-decoration: underline;
+}
+
+a:active {
+  color: rgb(96, 6, 6, 0.4);
+  text-decoration: underline dashed;
+}
+
+
+
+
+// Scroll Bar 
+::-webkit-scrollbar {
+  width: 10px; // Width of the vertical scrollbar 
+  height: 50px; // Height of the horizontal scrollbar 
+  padding: 40px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(
+    74,
+    62,
+    62,
+    0.4
+  ); // Color of the thumb (the draggable part) 
+  border-radius: 20px; // Rounded corners for the thumb 
+  padding: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; // Color of the track (the background of the scrollbar) 
+}
