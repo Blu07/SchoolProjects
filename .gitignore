@@ -65,8 +65,6 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
-# Because of SASS
-*.css
 
 # Node Local Modules
 node_modules/

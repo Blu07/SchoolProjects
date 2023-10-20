@@ -1,0 +1,286 @@
+html {
+  background-color: rgb(33, 34, 35);
+  color: rgb(226, 219, 212);
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 0px;
+  border-width: 0px;
+}
+
+body {
+  margin: 0px 2cm 0px 10px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+#main-grid {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  margin: 0px;
+  padding: 0px;
+  column-gap: 10px;
+}
+#main-grid #top-bar {
+  flex-flow: row wrap;
+  grid-column: 1/span 2;
+  grid-template-columns: 69px 1fr;
+  grid-auto-rows: 1fr;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  position: sticky;
+  top: 0;
+  background-image: linear-gradient(rgb(33, 34, 35) 80%, transparent);
+  display: grid;
+  row-gap: 6px;
+  width: 100%;
+}
+#main-grid #top-bar > * {
+  box-sizing: border-box;
+}
+#main-grid #top-bar * {
+  margin: 0;
+  white-space: nowrap;
+}
+#main-grid #top-bar .logo-red {
+  grid-row: 1;
+  grid-column: 1;
+  padding: 4px;
+  width: 69px;
+  align-items: center;
+  justify-content: center;
+}
+#main-grid #top-bar .logo-red a img {
+  display: block;
+  width: 100%;
+}
+#main-grid #top-bar .logo-text {
+  display: none;
+  padding: 8px 0px 0px;
+  width: 150px;
+  align-items: center;
+  justify-content: center;
+}
+#main-grid #top-bar .logo-text a img {
+  display: block;
+  width: 100%;
+  align-self: center;
+  justify-self: center;
+}
+#main-grid #top-bar .title {
+  grid-row: 1;
+  grid-column: 2/span 1;
+  flex: 1;
+  min-width: 0;
+  margin-left: 25px;
+}
+#main-grid #top-bar .search {
+  grid-row: 2;
+}
+#main-grid #top-bar .menu {
+  grid-row: 3;
+}
+#main-grid #top-bar .profile {
+  grid-row: 4;
+}
+#main-grid #top-bar .search,
+#main-grid #top-bar .menu,
+#main-grid #top-bar .profile {
+  grid-column: 1/3;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin: 0px 5px;
+  border: 2px solid #2b2c2d;
+  border-radius: 4px;
+  background-color: #202022;
+}
+@media only screen and (min-width: 600px) {
+  #main-grid #top-bar {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 70px;
+  }
+  #main-grid #top-bar .search,
+  #main-grid #top-bar .menu,
+  #main-grid #top-bar .profile {
+    aspect-ratio: 1/1;
+    width: auto;
+    height: 70%;
+  }
+}
+#main-grid #side-menu {
+  display: none;
+  grid-row: 2/span 1;
+  grid-column: 1/span 1;
+  padding: 0px 4px;
+  border-radius: 5px;
+  position: sticky;
+  top: 105px;
+  box-sizing: border-box;
+  height: calc(100dvh - 70px - 50px);
+  width: 4cm;
+  background-color: #202022;
+}
+#main-grid #side-menu nav {
+  display: flex;
+  flex-flow: column nowrap;
+  overflow-y: auto;
+  align-items: stretch;
+}
+#main-grid #side-menu nav a {
+  display: block;
+  background-color: rgba(127, 164, 196, 0.8);
+  padding: 4px;
+  margin: 2px;
+  border-radius: 3px;
+}
+#main-grid main {
+  flex: 1;
+  grid-column: 2;
+  grid-row: 2;
+  min-height: calc(100dvh - 105px);
+  width: 100%;
+}
+#main-grid main * {
+  margin-bottom: 2px;
+  padding: 4px;
+}
+#main-grid main p {
+  line-height: 1.8;
+  margin: 4px;
+  padding: 3px 5px;
+}
+#main-grid main section {
+  padding: 0px;
+}
+#main-grid main > * {
+  background-color: rgb(33, 34, 35);
+}
+#main-grid main > * > img {
+  display: block;
+  background-color: rgba(58, 58, 58, 0.4);
+  flex-basis: auto;
+  max-width: 30%;
+  min-width: 3cm;
+  margin: 10px 0px;
+  padding: 3px 5px;
+}
+#main-grid #address {
+  bottom: 0px;
+  padding: 4px;
+  grid-row: 3;
+  grid-column: 2;
+  height: 50px;
+  min-height: 50px;
+  background-color: rgba(54, 47, 38, 0.267);
+}
+#main-grid ul,
+#main-grid ol {
+  flex-flow: column;
+  width: 50%;
+  min-width: 8%;
+  margin-top: 5px;
+}
+#main-grid ul {
+  list-style-type: disc;
+}
+#main-grid li {
+  margin: 2px;
+  margin-left: 40px;
+  padding: 2px;
+  border-radius: 2px;
+}
+#main-grid table {
+  border-collapse: separate;
+  margin: 10px;
+  border-width: 1px 1px 0.8px 0.8px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.4) rgba(0, 0, 0, 0.8) rgba(0, 0, 0, 0.8);
+}
+#main-grid th,
+#main-grid td {
+  border-width: 0.8px 0.8px 1px 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.8) rgba(0, 0, 0, 0.8) rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.4);
+  padding: 4px 7px;
+}
+#main-grid th {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#main-grid td {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+#main-grid td img {
+  display: block;
+  min-block-size: 100px;
+  margin: auto auto;
+}
+@media only screen and (min-width: 992px) {
+  #main-grid #top-bar .logo-text {
+    display: block;
+    width: 300px;
+  }
+  #main-grid #side-menu {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1096px) {
+  #main-grid #top-bar .search {
+    width: 140px;
+    aspect-ratio: auto;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #main-grid #top-bar .menu {
+    width: 140px;
+    aspect-ratio: auto;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  #main-grid #top-bar .profile {
+    width: 140px;
+    aspect-ratio: auto;
+  }
+}
+
+a {
+  color: rgb(79, 65, 2);
+  text-shadow: 0.5px 0.2px black;
+}
+
+a:link {
+  color: rgb(214, 4, 4);
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(170, 14, 14);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(167, 10, 10);
+  text-decoration: underline;
+}
+
+a:active {
+  color: rgba(96, 6, 6, 0.4);
+  text-decoration: underline dashed;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 50px;
+  padding: 40px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(74, 62, 62, 0.4);
+  border-radius: 20px;
+  padding: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../scss/base.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAcA;EACE,kBAZyB;EAazB,OATc;EAUd;EAEA;EACA;;;AAGF;EACE;EACA;EACA;;;AAQF;EAaE;EAEA;EAEA;EACA;EAEA;;AAKA;EACE;EACA;EAEA;EACA;EAEA,aA9BoB;EA+BpB,gBA9BuB;EAkCvB;EACA;EAEA;EAaA;EACA;EAEA;;AAdA;EACE;;AAGF;EACE;EACA;;AAWF;EACE;EACA;EAEA;EACA;EACA;EACA;;AAEA;EACE;EACA;;AAKJ;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAKJ;EACE;EACA;EAGA;EACA;EACA;;AAKF;EAAS;;AACT;EAAQ;;AACR;EAAU;;AAGV;AAAA;AAAA;EAGE;EACA;EACA;EAEA;EAEA;EACA;EACA;EACA,kBAtJ4B;;AA2J9B;EApGF;IAqGI;IACA;IACA,QA3Ha;;EA6Hb;AAAA;AAAA;IAGE;IACA;IACA;;;AAYN;EACE;EAEA;EACA;EAEA;EACA;EAEA;EACA,KAvJqB;EAyJrB;EAEA;EACA,OAvJgB;EAyJhB,kBAlM8B;;AAoM9B;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;;AAWN;EACE;EAEA;EACA;EACA;EAGA;;AAGA;EACE;EACA;;AAIF;EAEE;EACA;EACA;;AAIF;EACE;;AAGF;EAGE,kBA3PqB;;AA8PrB;EACE;EACA;EACA;EAEA;EACA;EACA;EACA;;AAQN;EACE;EACA;EAEA;EACA;EAEA,QA9Oe;EA+Of;EAEA;;AAQF;AAAA;EAEE;EACA;EACA;EACA;;AAIF;EACE;;AAGF;EAEE;EACA;EACA;EACA;;AASF;EACE;EACA;EACA;EACA;EACA;;AAOF;AAAA;EAEE;EACA;EACA;EAEA;;AAIF;EACE;;AAGF;EACE;;AAEA;EACE;EACA;EACA;;AAYF;EACE;IACE;IACA;;EAGF;IACE;;;AAMJ;EACE;IACE;IACA;;;AAKJ;EACE;IACE;IACA;;;AAKJ;EACE;IACE;IACA;;;;AA2BR;EACE;EACA;;;AAGF;EACE;EACA;;;AAGF;EACE;EACA;;;AAGF;EACE;EACA;;;AAGF;EACE;EACA;;;AAOF;EACE;EACA;EACA;;;AAGF;EACE;EAMA;EACA;;;AAGF;EACE%22,%22file%22:%22base.css%22%7D */
