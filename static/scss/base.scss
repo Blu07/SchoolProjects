@@ -1,14 +1,6 @@
+@import 'variables';
+
 //  Fallback and standard styles for all HTML docs.
-
-
-$primary-background-color: rgb(33, 34, 35);
-$primary-background-color-darker: adjust-color($color: $primary-background-color, $red: -1, $green: -2, $blue: -1);
-$primary-background-color-lighter: adjust-color($color: $primary-background-color, $red: 10, $green: 10, $blue: 10);
-
-$primary-color: rgb(226, 219, 212);
-$secondary-color: blue;
-
-
 
 
 // Structure
@@ -22,7 +14,7 @@ html {
 }
 
 body {
-  margin: 0px 2cm 0px 10px;
+  margin: 0px $body-margin-sides;
   padding: 0px;
   overflow-x: hidden;
 }
@@ -34,16 +26,6 @@ body {
 // Main Grid 
 #main-grid {
   
-  $top-bar-padding-top: 25px;
-  $top-bar-padding-bottom: 10px;
-  
-  $top-bar-height: 70px;
-  $top-bar-height-total: calc($top-bar-height + $top-bar-padding-top + $top-bar-padding-bottom);
-
-  $address-height: 50px;
-  $address-height-total: 50px;
-
-  $side-menu-width: 4cm;
   
   display: grid;
   
@@ -216,58 +198,51 @@ body {
     
 
 
-
-  
-  
-  // Global Main 
   main {
-    flex: 1;
-    
+  
+
     grid-column: 2;
     grid-row: 2;
-    min-height: calc(100dvh - $top-bar-height-total); // View-height - top-bar, address is always right under bottom line when scrolled up 
-    
+    min-height: calc(
+      100dvh - $top-bar-height-total
+    ); // View-height - top-bar, address is always right under bottom line when scrolled up
   
     width: 100%;
-
-    
+  
     * {
       margin-bottom: 2px;
       padding: 4px;
-
     }
-    
+  
     p {
-     
       line-height: 1.8;
       margin: 4px;
       padding: 3px 5px;
     }
-
-
+  
     section {
       padding: 0px;
-    }
+  
+      }
+  
     
+  
     > * {
-    
-     
       background-color: $primary-background-color;
-      
-      
+  
       > img {
         display: block;
         background-color: rgba(58, 58, 58, 0.4);
         flex-basis: auto;
-        
+  
         max-width: 30%;
         min-width: 3cm;
         margin: 10px 0px;
         padding: 3px 5px;
-        
       }
     }
   }
+  
   
   
   // Global Address 
@@ -368,6 +343,10 @@ body {
 
       #side-menu {
         display: block;
+      }
+
+      main {
+        margin-left: 10px;
       }
 
     }

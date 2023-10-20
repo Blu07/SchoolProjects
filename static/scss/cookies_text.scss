@@ -1,0 +1,13 @@
+@import "variables";
+
+main {
+  
+  .left-right {
+    display: flex;
+    flex-flow: row nowrap;
+
+    > * {
+        flex: 1;
+    }
+  }
+}

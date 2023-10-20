@@ -1,0 +1,20 @@
+
+$primary-background-color: rgb(33, 34, 35);
+$primary-background-color-darker: adjust-color($color: $primary-background-color, $red: -1, $green: -2, $blue: -1);
+$primary-background-color-lighter: adjust-color($color: $primary-background-color, $red: 10, $green: 10, $blue: 10);
+
+$primary-color: rgb(226, 219, 212);
+$secondary-color: blue;
+
+$body-margin-sides: 1.5cm;
+
+$top-bar-padding-top: 25px;
+$top-bar-padding-bottom: 10px;
+
+$top-bar-height: 70px;
+$top-bar-height-total: calc($top-bar-height + $top-bar-padding-top + $top-bar-padding-bottom);
+
+$address-height: 50px;
+$address-height-total: 50px;
+
+$side-menu-width: 4cm;
