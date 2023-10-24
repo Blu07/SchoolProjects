@@ -1,20 +1,43 @@
+@import "base";
+
 main {
   form {
+    margin: 2px;
     padding: 5px 10px;
 
-    background-image: linear-gradient(rgb(226, 226, 237), rgb(234, 167, 167));
-    background-image: url("../Projects/Nyheter/nyhet1/JonasGahrStore.jpg");
     border: 3px solid rgb(120, 120, 171);
     border-radius: 10px;
+
+    width: max(50%, min(100%, 400px));
+
+    box-sizing: border-box;
   }
 
   h3 {
-    border: 1px solid black;
     margin: 0px;
   }
 
-  input[type=range] {
-    background-color: blue;
-    padding-top: 100px;
+  div.cats {
+    margin-left: 10px
   }
+
+
+  input {
+    background-color: $primary-background-color-darker;
+    border-color: $primary-background-color-lighter;
+    border-radius: 4px;
+    color: $primary-color;
+    margin: 8px 3px;
+  }
+
+  label {
+    margin: 8px 3px;
+  }
+
+  .required::after {
+    content: " *";
+    color: rgb(224, 3, 3);
+  }
+
+
 }

@@ -1,9 +1,8 @@
-
-$portrait-border-radius: 10px;
-
+@import "base";
 
 main {
-
+    $portrait-border-radius: 10px;
+    
     .gallery {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
