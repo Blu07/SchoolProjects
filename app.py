@@ -6,7 +6,6 @@ import os
 import subprocess
 import threading
 import re
-import argparse
 
 secret_key = secrets.token_hex(16)
 
@@ -126,10 +125,7 @@ if __name__ == '__main__':
         watcher_thread = threading.Thread(target=sass_watcher_thread)
         watcher_thread.daemon = True  # Exit the thread when the main program exits
         watcher_thread.start()
-        
-
-
-
+   
     open_sass_watcher_thread()    
 
     # Run the app
