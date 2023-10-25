@@ -3,7 +3,7 @@
 main {
   form {
     margin: 2px;
-    padding: 5px 10px;
+    padding: 10px 15px;
 
     border: 3px solid rgb(120, 120, 171);
     border-radius: 10px;
@@ -14,30 +14,41 @@ main {
   }
 
   h3 {
-    margin: 0px;
+    margin: 0px 0px 3px -4px;
   }
-
-  div.cats {
-    margin-left: 10px
-  }
-
 
   input {
     background-color: $primary-background-color-darker;
     border-color: $primary-background-color-lighter;
     border-radius: 4px;
     color: $primary-color;
-    margin: 8px 3px;
+    margin: 4px 3px;
+    padding: 4px 2px;
+    font-size: medium;
   }
 
   label {
     margin: 8px 3px;
   }
 
-  .required::after {
+  label::after + input[required] {
     content: " *";
     color: rgb(224, 3, 3);
   }
 
+  .required::after {
+    content: " *";
+    color: rgb(224, 3, 3);
+  }
+}
 
+// Auto Fill
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: $primary-color;
+  transition: background-color 5000s ease-in-out 0s; // transition here does nothing in recent Chrome browsers, it's only a fallback solution for older versions of Chrome.
+  box-shadow: inset 0 0 20px 20px $primary-background-color-darker;
 }
