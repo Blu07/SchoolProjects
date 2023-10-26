@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  margin: 0px $body-margin-sides;
+  margin: 0px min($body-margin-sides, 10%);
   padding: 0px;
   overflow-x: hidden;
 }
@@ -28,8 +28,6 @@ body {
 
   margin: 0px;
   padding: 0px;
-
-  column-gap: 10px;
 
   // Global Top Bar
   #top-bar {
@@ -210,68 +208,11 @@ body {
     background-color: rgba(54, 47, 38, 0.267);
   }
 
-  //
-
-  // Lists
-  ul,
-  ol {
-    flex-flow: column;
-    width: 50%;
-    min-width: 8%;
-    margin-top: 5px;
-  }
-
-  ul {
-    list-style-type: disc;
-  }
-
-  li {
-    margin: 2px;
-    margin-left: 40px;
-    padding: 2px;
-    border-radius: 2px;
-  }
-
-  // Tables
-
-  // Main Table Element
-  table {
-    border-collapse: separate;
-    margin: 10px;
-    border-width: 1px 1px 0.8px 0.8px;
-    border-style: solid;
-    border-color: rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.4)
-      rgba(0, 0, 0, 0.8) rgba(0, 0, 0, 0.8);
-  }
-
-  // Table-head and Table-Data
-  // Shared Styles
-  th,
-  td {
-    border-width: 0.8px 0.8px 1px 1px;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.8) rgba(0, 0, 0, 0.8) rgba(255, 255, 255, 0.4)
-      rgba(255, 255, 255, 0.4);
-    padding: 4px 7px;
-  }
-
-  // Separate Styles
-  th {
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-
-  td {
-    background-color: rgba(0, 0, 0, 0.05);
-
-    img {
-      display: block;
-      min-block-size: 100px;
-      margin: auto auto;
-    }
-  }
 
   // Small devices (portrait tablets and large phones, 600px and up)
   @media only screen and (min-width: 600px) {
+    column-gap: 10px;
+    
     #top-bar {
       display: flex;
       flex-flow: row nowrap;
