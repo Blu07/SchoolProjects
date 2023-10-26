@@ -15,7 +15,7 @@ if __name__=='__main__':
             do_full_sass()
         except subprocess.CalledProcessError:
             print("Error: 'sass' is not recognized as a command.")
-            os.system()
+            # os.system()
             print("Need sass variable in PATH!")
 
     def do_full_sass():

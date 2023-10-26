@@ -104,12 +104,15 @@ def serve_project(project_path):
     
     path = f"{project_name}/{subfolders}/{file_name}"
     
+
     # Render the template with the appropriate folder structure
     return render_template(path, side_menu_content=side_menu_content, title=title)
 
 
 
-
+@app.route(f'/../Feedback/<path:step_file>')
+def feedback_steps(step_file):
+    return render_template(step_file)
 
 if __name__ == '__main__':
     

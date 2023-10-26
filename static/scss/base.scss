@@ -23,7 +23,7 @@ body {
 // Main Grid
 #main-grid {
   display: grid;
-
+  box-sizing: border-box;
   grid-template-columns: min-content 1fr;
 
   margin: 0px;

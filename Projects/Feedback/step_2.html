@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block head %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/feedback.css') }}"
+/>
+<title>Send Feedback</title>
+{% endblock %} {% block main %}
+<h1>Hei, her er din tilbakemelding :&rpar;</h1>
+<h3>Resultater</h3>
+
+<div id="previous_page_results"></div>
+<script>
+  const resultsList = document.getElementById("previous_page_results");
+  new URLSearchParams(window.location.search).forEach((value, name) => {
+    
+    if (value) {
+        resultsList.append(`${name}: ${value}`);
+        
+        resultsList.append(document.createElement("br"));
+    }
+  });
+</script>
+
+{% endblock %}
