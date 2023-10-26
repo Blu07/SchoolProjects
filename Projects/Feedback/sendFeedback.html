@@ -9,63 +9,68 @@
 
 {% block main %}
 <h1>Hei, send meg en tilbakemelding her :&rpar;</h1>
-    <form>
+    <form action="step_2.html" method="get">
         <div class="cats" class="required">
             <h3 class="required">Hvor mange katter vil du ha?</h3>
-            <input type="radio" name="cats" id="no_cat" value="No Cat" required>
+            <input type="radio" name="Number of Cats" id="no_cat" value="0" required>
             <label for="no_cat">(0) Ingen</label>
             <br>
-            <input type="radio" name="cats" id="one_cat" value="One Cat" required>
+            <input type="radio" name="Number of Cats" id="one_cat" value="1" required>
             <label for="one_cat">(1) En</label>
             <br>
-            <input type="radio" name="cats" id="two_cat" value="Two Cats" required>
+            <input type="radio" name="Number of Cats" id="two_cat" value="2" required>
             <label for="two_cat">(2) To</label>
             <br>
-            <input type="radio" name="cats" id="three_cat" value="Three Cats" required>
+            <input type="radio" name="Number of Cats" id="three_cat" value="3" required>
             <label for="three_cat">(3) Tre</label>
             <br>
-            <input type="radio" name="cats" id="four_more_cat" value="Four or more Cats" required>
+            <input type="radio" name="Number of Cats" id="four_more_cat" value="4+" required>
             <label for="four_more_cat">(4+) Fire eller Flere</label>
             <br><br>
         </div>
         <div class="personal_info">
             <h3>Informasjon om deg</h3>
             <label for="name" class="required">Hva heter du? </label>
-            <input type="text" name="first_name" id="name" placeholder="Fornavn" required>
-            <input type="text" name="last_name" id="name" placeholder="Etternavn" required>
+            <input type="text" name="First Name" id="name" placeholder="Fornavn" required>
+            <input type="text" name="Last Name" id="name" placeholder="Etternavn" required>
             <br>
             <label for="b_date">Hva er fødselsdatoen din?</label>
-            <input type="date" name="birth_date" id="b_date">
+            <input type="date" name="Birth Date" id="b_date">
             <br>
             <label for="email" class="required">E-postadressen din:</label>
-            <input type="email" name="email" id="email" placeholder="navnet.ditt@eksempel.no" required>
+            <input type="email" name="E-mail" id="email" placeholder="navnet.ditt@eksempel.no" required>
             <br>
             <label for="phone_num">Tlf.nummeret ditt:</label>
-            <input type="number" name="phone_number" id="phone_num" placeholder="+47 197 45 374">
+            <input type="number" name="Phone Number" id="phone_num" placeholder="+47 197 45 374">
             <br>
             <br>
         </div>
         <div>
             <h3>Hvilken mat liker du?</h3>
-            <input type="checkbox" name="food" id="taco" value="Taco">
+            <input type="checkbox" name="Liked Foods" id="taco" value="Taco">
             <label for="taco">Taco</label>
             <br>
-            <input type="checkbox" name="food" id="pizza" value="Pizza">
+            <input type="checkbox" name="Liked Foods" id="pizza" value="Pizza">
             <label for="pizza">Pizza</label>
             <br>
-            <input type="checkbox" name="food" id="sushi" value="Sushi">
+            <input type="checkbox" name="Liked Foods" id="sushi" value="Sushi">
             <label for="sushi">Sushi</label>
             <br>
-            <input type="checkbox" name="food" id="hamburger" value="Hamburger">
+            <input type="checkbox" name="Liked Foods" id="hamburger" value="Hamburger">
             <label for="hamburger">Hamburger</label>
             <br>
-            <input type="checkbox" name="food" id="fisk" value="Fisk">
+            <input type="checkbox" name="Liked Foods" id="fisk" value="Fisk">
             <label for="fisk">Fisk</label>
             <br>
-            <input type="checkbox" name="food" id="ribbe" value="Ribbe">
+            <input type="checkbox" name="Liked Foods" id="ribbe" value="Ribbe">
             <label for="ribbe">Ribbe</label>
             <br>
             <br>
+        </div>
+        <div>
+            <p>Hvor mange gjester kommer?</p>
+            <input type="range" name="Number of Guests" id="guests" value="5" min="1" max="9" oninput="this.nextElementSibling.innerHTML = this.value">
+            <output>5</output>
         </div>
         <div class="submit">
             <button type="submit">Send inn</button>
