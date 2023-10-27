@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  margin: 0px min($body-margin-sides, 10%);
+  margin: 0px $body-margin-sides;
   padding: 0px;
   overflow-x: hidden;
 }
@@ -25,24 +25,39 @@ body {
   display: grid;
   box-sizing: border-box;
   grid-template-columns: min-content 1fr;
-
+  
   margin: 0px;
   padding: 0px;
 
+  // back-filler for top-bar
+  #top-bar-fill-height {
+    display: block;
+    height: $top-bar-height-total-less-600;
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    
+  }
+
   // Global Top Bar
   #top-bar {
+    // DEFAULT: Extra small devices (phones and smaller devices, 600px and down)
+    display: grid;
+    row-gap: 6px;
+  
     flex-flow: row wrap;
     grid-column: 1 / span 2;
 
     grid-template-columns: 1fr;
-    grid-auto-rows: calc($top-bar-height * 1);
+    grid-auto-rows: $top-bar-height;
 
-    padding-top: $top-bar-padding-top;
-    padding-bottom: $top-bar-padding-bottom;
-
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
 
+    // box-sizing: border-box;
+    padding: $top-bar-padding-top $body-margin-sides $top-bar-padding-bottom;
+    
     background-image: linear-gradient(
       $primary-background-color 90%,
       transparent
@@ -57,11 +72,6 @@ body {
       white-space: nowrap;
     }
 
-    // DEFAULT: Extra small devices (phones and smaller devices, 600px and down)
-    display: grid;
-    row-gap: 6px;
-
-    width: 100%;
 
     .logo-red {
       display: block;
@@ -99,7 +109,7 @@ body {
     .title {
       grid-row: 2;
       grid-column: 1 / span 2;
-    
+      flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center; /* Center horizontally */
@@ -153,7 +163,7 @@ body {
     border-radius: 5px;
 
     position: sticky;
-    top: $top-bar-height-total;
+    top: $top-bar-height-total-less-600;
 
     box-sizing: border-box;
 
@@ -183,11 +193,12 @@ body {
   main {
     grid-column: 2;
     grid-row: 2;
-    min-height: calc(
-      100dvh - $top-bar-height-total
-    ); // View-height - top-bar, address is always right under bottom line when scrolled up
+    top: $top-bar-height-total-less-600;
+    min-height: calc(100dvh - $top-bar-height-total-less-600); // View-height - top-bar, address is always right under bottom line when scrolled up
 
     width: 100%;
+    box-sizing: border-box;
+   
 
     section {
       padding: 0px;
@@ -211,8 +222,15 @@ body {
 
   // Small devices (portrait tablets and large phones, 600px and up)
   @media only screen and (min-width: 600px) {
-    column-gap: 10px;
-    
+
+    #top-bar-fill-height {
+      height: $top-bar-height-total-greater-600;
+    }
+
+    #side-menu {
+      top: $top-bar-height-total-greater-600;
+    }
+
     #top-bar {
       display: flex;
       flex-flow: row nowrap;
@@ -226,7 +244,7 @@ body {
       }
 
       .title {
-        display: block;
+        display: flex;
         flex: 1;
       }
 
@@ -238,6 +256,12 @@ body {
         margin-left: 10px;
       }
     }
+
+    main {
+      top: $top-bar-height-total-greater-600;
+      min-height: calc(100dvh - $top-bar-height-total-greater-600); // View-height - top-bar, address is always right beneeth bottom of screen when scrolled completely up
+    }
+
   }
 
   // Medium devices (landscape tablets, 768px and up)
@@ -252,10 +276,14 @@ body {
       padding-left: 10px;
     }
 
+    column-gap: 10px;
     #side-menu {
       display: block;
     }
-
+    main {
+      padding-right: calc($main-padding-sides - $body-margin-sides);
+      padding-left: $main-padding-sides;
+    }
   }
 
   // Large devices (laptops/desktops, 1096px and up)

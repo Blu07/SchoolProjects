@@ -6,15 +6,20 @@ $primary-background-color-lighter: adjust-color($color: $primary-background-colo
 $primary-color: rgb(226, 219, 212);
 $secondary-color: blue;
 
-$body-margin-sides: 1.5cm;
+$body-margin-sides-max: 1.5cm;
+$body-margin-sides: min($body-margin-sides-max, 10%);
 
 $top-bar-padding-top: 25px;
 $top-bar-padding-bottom: 10px;
-
 $top-bar-height: 35px;
-$top-bar-height-total: calc($top-bar-height + $top-bar-padding-top + $top-bar-padding-bottom);
+$top-bar-row-gap: 6px;
+$top-bar-height-total-less-600: calc(5 * $top-bar-height + 4 * $top-bar-row-gap + $top-bar-padding-top + $top-bar-padding-bottom);
+$top-bar-height-total-greater-600: calc($top-bar-height + $top-bar-padding-top + $top-bar-padding-bottom);
+
+$side-menu-width: 4cm;
+
+$main-padding-sides: 10%;
 
 $address-height: 50px;
 $address-height-total: 50px;
 
-$side-menu-width: 4cm;

@@ -18,24 +18,26 @@ body {
   grid-template-columns: min-content 1fr;
   margin: 0px;
   padding: 0px;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+}
+#main-grid #top-bar-fill-height {
+  display: block;
+  height: 234px;
+  grid-row: 1;
+  grid-column: 1/span 2;
 }
 #main-grid #top-bar {
+  display: grid;
+  row-gap: 6px;
   flex-flow: row wrap;
   grid-column: 1/span 2;
   grid-template-columns: 1fr;
   grid-auto-rows: 35px;
-  padding-top: 25px;
-  padding-bottom: 10px;
-  position: sticky;
+  position: fixed;
   top: 0;
-  left: -1.5cm;
-  right: -1.5cm;
+  left: 0;
+  right: 0;
+  padding: 25px min(1.5cm, 10%) 10px;
   background-image: linear-gradient(rgb(33, 34, 35) 90%, transparent);
-  display: grid;
-  row-gap: 6px;
-  width: 100%;
 }
 #main-grid #top-bar > * {
   box-sizing: border-box;
@@ -49,7 +51,6 @@ body {
   grid-row: 1;
   grid-column: 1;
   padding: 0px;
-  width: -moz-fit-content;
   width: fit-content;
 }
 #main-grid #top-bar .logo-red a img {
@@ -60,14 +61,12 @@ body {
 #main-grid #top-bar .logo-text {
   display: block;
   padding-top: 4px;
-  width: -moz-fit-content;
   width: fit-content;
   padding-left: 10px;
   grid-row: 1;
   grid-column: 2;
 }
 #main-grid #top-bar .logo-text a {
-  width: -moz-min-content;
   width: min-content;
 }
 #main-grid #top-bar .logo-text a img {
@@ -78,6 +77,7 @@ body {
 #main-grid #top-bar .title {
   grid-row: 2;
   grid-column: 1/span 2;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center; /* Center horizontally */
@@ -121,7 +121,7 @@ body {
   padding: 0px 4px;
   border-radius: 5px;
   position: sticky;
-  top: 70px;
+  top: 234px;
   box-sizing: border-box;
   height: calc(100dvh - 35px - 50px);
   width: 4cm;
@@ -143,8 +143,10 @@ body {
 #main-grid main {
   grid-column: 2;
   grid-row: 2;
-  min-height: calc(100dvh - 70px);
+  top: 234px;
+  min-height: calc(100dvh - 234px);
   width: 100%;
+  box-sizing: border-box;
 }
 #main-grid main section {
   padding: 0px;
@@ -159,8 +161,11 @@ body {
   background-color: rgba(54, 47, 38, 0.267);
 }
 @media only screen and (min-width: 600px) {
-  #main-grid {
-    column-gap: 10px;
+  #main-grid #top-bar-fill-height {
+    height: 70px;
+  }
+  #main-grid #side-menu {
+    top: 70px;
   }
   #main-grid #top-bar {
     display: flex;
@@ -174,7 +179,7 @@ body {
     display: block;
   }
   #main-grid #top-bar .title {
-    display: block;
+    display: flex;
     flex: 1;
   }
   #main-grid #top-bar .search,
@@ -184,8 +189,15 @@ body {
     width: auto;
     margin-left: 10px;
   }
+  #main-grid main {
+    top: 70px;
+    min-height: calc(100dvh - 70px);
+  }
 }
 @media only screen and (min-width: 992px) {
+  #main-grid {
+    column-gap: 10px;
+  }
   #main-grid #top-bar .logo-text {
     display: block;
     width: auto;
@@ -194,8 +206,9 @@ body {
   #main-grid #side-menu {
     display: block;
   }
-  #main-grid #main {
-    margin-left: 1px;
+  #main-grid main {
+    padding-right: calc(10% - min(1.5cm, 10%));
+    padding-left: 10%;
   }
 }
 @media only screen and (min-width: 1096px) {
@@ -239,8 +252,7 @@ a:hover {
 
 a:active {
   color: rgba(96, 6, 6, 0.4);
-  -webkit-text-decoration: underline dashed;
-          text-decoration: underline dashed;
+  text-decoration: underline dashed;
 }
 
 ::-webkit-scrollbar {
@@ -257,4 +269,6 @@ a:active {
 
 ::-webkit-scrollbar-track {
   background-color: transparent;
-}/*# sourceMappingURL=base.css.map */
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../scss/base.scss%22,%22../scss/variables.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAKA;EACE,kBCLyB;EDMzB,OCFc;EDGd;EAGA;EACA;;;AAGF;EACE;EACA;EACA;;;AAKF;EACE;EACA;EACA;EAEA;EACA;;AAGA;EACE;EACA,QCnB4B;EDoB5B;EACA;;AAKF;EAEE;EACA;EAEA;EACA;EAEA;EACA,gBCrCa;EDuCb;EACA;EACA;EACA;EAGA;EAEA;;AAKA;EACE;;AAGF;EACE;EACA;;AAIF;EACE;EACA;EACA;EAEA;EACA;;AAEA;EACE;EACA;EACA;;AAIJ;EACE;EACA;EACA;EACA;EACA;EACA;;AACA;EACE;;AAEA;EACE;EACA;EACA;;AAKN;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA,QC7GS;ED8GT;EACA;EACA;;AAGJ;EACE;;AAEF;EACE;;AAEF;EACE;;AAGF;AAAA;AAAA;EAGE;EACA;EACA;EAEA;EAEA;EACA;EACA;EACA,kBCpJ4B;;ADyJhC;EACE;EAEA;EACA;EAEA;EACA;EAEA;EACA,KCtJ4B;EDwJ5B;EAEA;EAGA,OC1Jc;ED4Jd,kBC5K8B;;AD8K9B;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;;AAKN;EACE;EACA;EACA,KCpL4B;EDqL5B;EAEA;EACA;;AAGA;EACE;;AAKJ;EACE;EACA;EAEA;EACA;EAEA,QCjMa;EDkMb;EAEA;;AAKF;EAEE;IACE,QClN6B;;EDqN/B;IACE,KCtN6B;;EDyN/B;IACE;IACA;IACA,QC/NW;;EDiOX;IACE;;EAEF;IACE;;EAGF;IACE;IACA;;EAGF;AAAA;AAAA;IAGE;IACA;IACA;;EAIJ;IACE,KCpP6B;IDqP7B;;;AAUJ;EAxPF;IA+PI;;EANA;IACE;IACA;IACA;;EAIF;IACE;;EAEF;IACE;IACA,cCxQe;;;AD6QnB;EACE;IACE;IACA;;;AAKJ;EACE;IACE;IACA;;;AAKJ;EACE;IACE;IACA;;;;AAMN;EACE;EACA;;;AAGF;EACE;EACA;;;AAGF;EACE;EACA;;;AAGF;EACE;EACA;;;AAGF;EACE;EACA;;;AAIF;EACE;EACA;EACA;;;AAGF;EACE;EAMA;EACA;;;AAGF;EACE%22,%22file%22:%22base.css%22%7D */

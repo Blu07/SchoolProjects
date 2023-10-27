@@ -1,11 +1,9 @@
 @import "base";
 
 main {
-  $padding-sides: 20%;
-  padding: 0px calc($padding-sides - $body-margin-sides);
-  
+  padding: 0px;
   box-sizing: border-box;
-  border: 1px white solid;
+  
   #cookie {
     width: auto;
     
@@ -24,14 +22,14 @@ main {
     display: block;
     
     ul {
+      box-sizing: border-box;
       width: 100%,
     }
   }
 
   @media only screen and (min-width: 600px) {
-    
-    padding-right: calc(20% - $body-margin-sides);
 
+   
     .left-right {
       display: flex;
       flex-flow: row nowrap;
@@ -41,5 +39,6 @@ main {
       }
     }
   }
+
 
 }
