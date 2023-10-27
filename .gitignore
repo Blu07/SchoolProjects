@@ -72,3 +72,4 @@ node_modules/
 # when SASS does not work
 */scss/*.css
 */scss/*.css.map
+variables.css
