@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  margin: 0px $body-margin-sides;
+  margin: 0px min($body-margin-sides, 10%);
   padding: 0px;
   overflow-x: hidden;
 }
@@ -29,8 +29,6 @@ body {
   margin: 0px;
   padding: 0px;
 
-  column-gap: 10px;
-
   // Global Top Bar
   #top-bar {
     flex-flow: row wrap;
@@ -44,8 +42,6 @@ body {
 
     position: sticky;
     top: 0;
-    left: calc(0cm - $body-margin-sides);
-    right: calc(0cm - $body-margin-sides);
 
     background-image: linear-gradient(
       $primary-background-color 90%,
@@ -138,7 +134,7 @@ body {
       height: 100%;
 
       text-align: center;
-
+      
       padding: 0px 5px;
       border: 2px solid $primary-background-color-lighter;
       border-radius: 4px;
@@ -212,68 +208,11 @@ body {
     background-color: rgba(54, 47, 38, 0.267);
   }
 
-  //
-
-  // Lists
-  ul,
-  ol {
-    flex-flow: column;
-    width: 50%;
-    min-width: 8%;
-    margin-top: 5px;
-  }
-
-  ul {
-    list-style-type: disc;
-  }
-
-  li {
-    margin: 2px;
-    margin-left: 40px;
-    padding: 2px;
-    border-radius: 2px;
-  }
-
-  // Tables
-
-  // Main Table Element
-  table {
-    border-collapse: separate;
-    margin: 10px;
-    border-width: 1px 1px 0.8px 0.8px;
-    border-style: solid;
-    border-color: rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.4)
-      rgba(0, 0, 0, 0.8) rgba(0, 0, 0, 0.8);
-  }
-
-  // Table-head and Table-Data
-  // Shared Styles
-  th,
-  td {
-    border-width: 0.8px 0.8px 1px 1px;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.8) rgba(0, 0, 0, 0.8) rgba(255, 255, 255, 0.4)
-      rgba(255, 255, 255, 0.4);
-    padding: 4px 7px;
-  }
-
-  // Separate Styles
-  th {
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-
-  td {
-    background-color: rgba(0, 0, 0, 0.05);
-
-    img {
-      display: block;
-      min-block-size: 100px;
-      margin: auto auto;
-    }
-  }
 
   // Small devices (portrait tablets and large phones, 600px and up)
   @media only screen and (min-width: 600px) {
+    column-gap: 10px;
+    
     #top-bar {
       display: flex;
       flex-flow: row nowrap;
@@ -296,6 +235,7 @@ body {
       .profile {
         aspect-ratio: 1 / 1;
         width: auto;
+        margin-left: 10px;
       }
     }
   }
@@ -315,9 +255,7 @@ body {
     #side-menu {
       display: block;
     }
-    #main {
-      margin-left: 1px;
-    }
+
   }
 
   // Large devices (laptops/desktops, 1096px and up)

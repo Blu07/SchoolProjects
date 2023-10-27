@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  margin: 0px 1.5cm;
+  margin: 0px min(1.5cm, 10%);
   padding: 0px;
   overflow-x: hidden;
 }
@@ -158,48 +158,10 @@ body {
   min-height: 50px;
   background-color: rgba(54, 47, 38, 0.267);
 }
-#main-grid ul,
-#main-grid ol {
-  flex-flow: column;
-  width: 50%;
-  min-width: 8%;
-  margin-top: 5px;
-}
-#main-grid ul {
-  list-style-type: disc;
-}
-#main-grid li {
-  margin: 2px;
-  margin-left: 40px;
-  padding: 2px;
-  border-radius: 2px;
-}
-#main-grid table {
-  border-collapse: separate;
-  margin: 10px;
-  border-width: 1px 1px 0.8px 0.8px;
-  border-style: solid;
-  border-color: rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.4) rgba(0, 0, 0, 0.8) rgba(0, 0, 0, 0.8);
-}
-#main-grid th,
-#main-grid td {
-  border-width: 0.8px 0.8px 1px 1px;
-  border-style: solid;
-  border-color: rgba(0, 0, 0, 0.8) rgba(0, 0, 0, 0.8) rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.4);
-  padding: 4px 7px;
-}
-#main-grid th {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-#main-grid td {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-#main-grid td img {
-  display: block;
-  min-block-size: 100px;
-  margin: auto auto;
-}
 @media only screen and (min-width: 600px) {
+  #main-grid {
+    column-gap: 10px;
+  }
   #main-grid #top-bar {
     display: flex;
     flex-flow: row nowrap;
@@ -220,6 +182,7 @@ body {
   #main-grid #top-bar .profile {
     aspect-ratio: 1/1;
     width: auto;
+    margin-left: 10px;
   }
 }
 @media only screen and (min-width: 992px) {

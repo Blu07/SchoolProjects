@@ -1,13 +1,45 @@
 @import "base";
 
 main {
+  $padding-sides: 20%;
+  padding: 0px calc($padding-sides - $body-margin-sides);
   
-  .left-right {
-    display: flex;
-    flex-flow: row nowrap;
+  box-sizing: border-box;
+  border: 1px white solid;
+  #cookie {
+    width: auto;
+    
+    display: block; /* Makes the image a block-level element */
+    margin: 0 auto; /* Centers the image horizontally */
+  }
 
-    > * {
-        flex: 1;
+
+  #AIx,
+  #cookies {
+    width: 100%;
+    height: auto;
+  }
+
+  .left-right {
+    display: block;
+    
+    ul {
+      width: 100%,
     }
   }
+
+  @media only screen and (min-width: 600px) {
+    
+    padding-right: calc(20% - $body-margin-sides);
+
+    .left-right {
+      display: flex;
+      flex-flow: row nowrap;
+
+      > * {
+          flex: 1;
+      }
+    }
+  }
+
 }
