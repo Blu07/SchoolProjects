@@ -1,6 +1,5 @@
 from flask import Flask, render_template, url_for
 from init import scss_Folder, css_Folder
-from static.python.full_sass import do_full_sass
 import secrets
 import os
 import subprocess
