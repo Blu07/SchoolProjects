@@ -44,8 +44,8 @@ body {
 
     position: sticky;
     top: 0;
-    left: calc(0 - $body-margin-sides);
-    right: calc(0 - $body-margin-sides);
+    left: calc(0cm - $body-margin-sides);
+    right: calc(0cm - $body-margin-sides);
 
     background-image: linear-gradient(
       $primary-background-color 90%,
@@ -314,6 +314,9 @@ body {
 
     #side-menu {
       display: block;
+    }
+    #main {
+      margin-left: 1px;
     }
   }
 

@@ -7,7 +7,8 @@ css_Folder = 'static/css'
 
 if __name__=='__main__':
     
-    def do_initialize():
+    def do_initialize(css):
+        new_css_Folder = css
         os.system('pip install -r requirements.txt')
         os.system('npm install')
         try:
@@ -15,8 +16,10 @@ if __name__=='__main__':
             do_full_sass()
         except subprocess.CalledProcessError:
             print("Error: 'sass' is not recognized as a command.")
-            # os.system()
+            
+            new_css_Folder = 'static/scss'
             print("Need sass variable in PATH!")
+        return new_css_Folder
 
     def do_full_sass():
        os.system(f'py static/python/full_sass.py {scss_Folder} {css_Folder}')
@@ -24,7 +27,7 @@ if __name__=='__main__':
     _ = "New-Item -Path $profile -Type File -Force"
     _ = "notepad $PROFILE"
 
-    do_initialize()
+    do_initialize(css_Folder)
    
 
 

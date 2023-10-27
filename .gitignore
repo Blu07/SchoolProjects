@@ -68,3 +68,7 @@ docs/_build/
 
 # Node Local Modules
 node_modules/
+
+# when SASS does not work
+*/scss/*.css
+*/scss/*.css.map
