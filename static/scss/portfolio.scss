@@ -1,0 +1,15 @@
+@import 'base';
+
+// Design everything for Dark Mode first
+
+html {
+    background-color: $primary-background-color;
+}
+
+
+
+@media (prefers-color-scheme: light) {
+    html {
+        background-color: rgb(232, 236, 240);
+    }
+  }

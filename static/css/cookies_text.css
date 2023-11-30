@@ -251,8 +251,8 @@ a:hover {
 }
 
 a:active {
-  color: rgba(96, 6, 6, 0.4);
-  text-decoration: underline dashed;
+  color: rgb(146, 5, 5);
+  text-decoration: none;
 }
 
 ::-webkit-scrollbar {

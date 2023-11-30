@@ -114,6 +114,11 @@ def feedback_steps(step_file):
     return render_template(step_file)
 
 
+@app.route('/portfolio')
+def portfolio():
+    return render_template(f"/portfolio.html")
+
+
 if __name__ == '__main__':
 
     debug = True
