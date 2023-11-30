@@ -12,6 +12,22 @@ function newGreet() {
         count++;
     }
     else {
-        count = 0
+        count = 0;
     }
+    return true;
 }
+
+
+
+function getRandomIndex(highest) {
+    let delta = 0.00001
+    return Math.floor(Math.min(Math.random() * highest, highest - delta));
+}
+
+function randomGreet(greets) {
+    let greeting = greets[getRandomIndex(highest=greets.length)];
+    
+    console.log(greeting);
+}
+
+randomGreet(greetings)
